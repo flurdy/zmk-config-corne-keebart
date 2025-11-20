@@ -159,10 +159,10 @@
             // |      |     |     |     |     |     |               |     |      |     |     |     |   |
             //                    |     |     |     |               |     |      |     |
             bindings = <
-                &to BASE &kp EXCL &kp HASH    &none     &none            &none             &none  &none &none     &kp N7 &kp N8 &kp N9 &kp N0   &none
-                &trans   &kp PLUS &kp EQUAL   &kp MINUS &kp lt           &kp GT            &none  &none &kp COMMA &kp N4 &kp N5 &kp N6 &none    &none
-                &trans   &kp AMPS &kp PERCENT &kp STAR  &kp LEFT_BRACKET &kp RIGHT_BRACKET              &kp DOT   &kp N1 &kp N2 &kp N3 &kp FSLH &none
-                                              &to BASE  &kp SPC          &kp TAB                        &kp RET   &kp N0 &trans
+                &to BASE &kp EXCL &kp HASH  &none     &none            &none             &none  &none &none     &kp N7 &kp N8 &kp N9 &kp N0   &none
+                &trans   &kp PLUS &kp EQUAL &kp MINUS &kp LT           &kp GT            &none  &none &kp COMMA &kp N4 &kp N5 &kp N6 &none    &none
+                &trans   &kp PIPE &kp PRCNT &kp STAR  &kp LEFT_BRACKET &kp RIGHT_BRACKET              &kp DOT   &kp N1 &kp N2 &kp N3 &kp FSLH &none
+                                            &to BASE  &kp SPC          &kp TAB                        &kp RET   &kp N0 &trans
             >;
         };
 
@@ -184,9 +184,9 @@
             // |      |     |     |     |     |     |               |     |      |     |     |     |   |
             //                    |     |     |     |               |     |      |     |
             bindings = <
-                &to BASE &kp LS(NUBS) &none         &none     &kp GRAVE &kp AT   &none &none &kp LS(N6) &trans &trans   &trans &kp AT    &none
-                &trans   &kp LATS DQT &kp LS(MINUS) &kp COLON &kp LPAR  &kp RPAR &none &none &trans     &trans &trans   &trans &trans    &none
-                &trans   &none55      &none         &none     &kp LBRC  &kp RBRC             &none      &none  &kp SEMI &none  &kp QMARK &none
+                &to BASE &kp LS(NUBS) &LS(N3)       &none     &kp GRAVE &kp AT   &none &none &kp LS(N6) &trans &trans   &trans    &kp AT    &none
+                &trans   &kp LATS DQT &kp LS(MINUS) &kp COLON &kp LPAR  &kp RPAR &none &none &trans     &trans &trans   &trans    &trans    &none
+                &trans   &kp NUBS     &kp AMPS      &kp DLLR  &kp LBRC  &kp RBRC             &none      &none  &kp SEMI &kp COLON &kp QMARK &none
                                       &to BASE      &trans    &trans                         &trans     &trans &trans
             >;
         };
@@ -209,10 +209,10 @@
             // |      |     |     |     |     |     |               |     |      |     |     |     |   |
             //                    |     |     |     |               |     |      |     |
             bindings = <
-                &to BASE &trans &trans &trans   &trans &trans &none &none &trans &trans &trans &trans &trans &none
-                &trans   &trans &trans &trans   &trans &trans &none &none &trans &trans &trans &trans &trans &none
-                &trans   &trans &trans &trans   &trans &trans             &trans &trans &trans &trans &trans &none
-                                       &to BASE &trans &trans             &trans &trans &trans
+                &to BASE &trans &trans &trans   &trans &trans &none &none &kp LC(HOME) &hp HOME     &kp UP   &kp END     &kp PGUP &none
+                &trans   &trans &trans &trans   &trans &trans &none &none &kp LC(LEFT) &kp LEFT     &kp DOWN &kp RIGHT   &kp PGDN &none
+                &trans   &trans &trans &trans   &trans &trans             &none        &kp LC(HOME) &none    &kp LC(END) &none    &none
+                                       &to BASE &trans &trans             &trans &trans   &trans
             >;
         };
 
