@@ -46,20 +46,20 @@
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // --------------------------------------------------------------------------------
-            // |      |  Q  |  W  |  E  |  R  |  T  |       |       |  Y  |  U   |  I  |  O  |  P  |      |
-            // | BSPC |  A  |  S  |  D  |  F  |  G  |       |       |  H  |  J   |  K  |  L  |  ;  |      |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |               |  N  |  M   |  ,  |  .  |  /  |      |
+            // |      |  Q  |  W  |  E  |  R  |  T  |       |       |  Y  |  U   |  I  |  O  |  P  |  |
+            // | BSPC |  A  |  S  |  D  |  F  |  G  |       |       |  H  |  J   |  K  |  L  |  ;  |  |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |               |  N  |  M   |  ,  |  .  |  /  |  |
             //                    | ESC | SPC | TAB |               | ENT | BSPC | DEL |
             // --------------------------------------------------------------------------------
-            // |      |     |     |     |     |     |       |       |     |      |     |     |     |      |
-            // |      |     |     |     |     |     |       |       |     |      |     |     |     |      |
-            // |      |     |     |     |     |     |               |     |      |     |     |     |      |
-            //                    |     |     |     |               |     |      |     |
+            // |      | RGUI | RALT | RSHFT | RCTRL | BLUE |       |       |      | RCTRL | RSHFT | RALT | RGUI |  |
+            // |      | GUI  | ALT  | SHFT  | CTRL  | TILE |       |       | CODE | CTRL  | SHFT  | ALT  | GUI  |  |
+            // |      |      | COMP |       | CODE  | NORW |               |      | FUNC  |       | COMP | MEDI |  |
+            //                      |       |       |      |               |      |       |       |
             bindings = <
-                &none     &kp Q &kp W &kp E &kp R &kp T &none   &none &kp Y &kp U  &kp I     &kp O   &kp P    &none
-                &kp BSPC  &kp A &kp S &kp D &kp F &kp G &none   &none &kp H &kp J  &kp K     &kp L   &kp SEMI &none
-                &kp LSHFT &kp Z &kp X &kp C &kp V &kp B               &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &none
-                                      &kp ESC &kp SPACE &kp TAB   &kp RET &kp BSPC &kp DEL
+                &none     &mt RGUI Q  &mt RALT W     &mt RSHFT E &mt RCTRL R    &lt BLUE T   &none   &none &kp Y        &mt RCTRL U   &mt RSHFT I &mt RALT O       &mt RGUI P    &none
+                &kp BSPC  &mt LGUI A  &mt LALT S     &mt LSHFT D &mt LCTRL F    &lt TILE G   &none   &none &lt CODE H   &mt LCTRL J   &mt LSHFT K &mt LALT L       &mt LGUI SEMI &none
+                &kp LSHFT &mt LSHFT Z &mt LS(RALT) X &kp C       &lt CODE V     &lt NORW B                 &kp N        &lt FUNC M    &kp COMMA   &mt LS(RALT) DOT &lt MEDI FSLH &none
+                                                     &kp ESC     &lt NUMB SPACE &lt NAVI TAB               &lt SYMB RET &lt NUMB BSPC &kp DEL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
