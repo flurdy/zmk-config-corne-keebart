@@ -320,7 +320,7 @@
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
             // ┃                                                 ┃
                       label = "TILE";
-                      display-name = "TILING";
+                      display-name = "Tiling";
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
@@ -335,7 +335,7 @@
             //                    |      |      |     |               |     |      |     |
             bindings = <
                 &to BASE &none &kp LG(W) &none      &kp LG(GRAVE) &kp LG(LS(GRAVE)) &none  &none &none    &kp LG(HOME) &kp LG(UP)   &kp LG(END)   &kp LG(PG_UP)   &none
-                &trans   &none &kp LALT  &kp LSHFT  &kp LCTRL     &none             &none  &none &none    &kp LG(LEFT) &kp LG(DOWN) &kp LG(RIGHT) &kp LG(PG_DOWN) &none
+                &trans   &none &none     &none      &none         &none                          &none    &none        &none        &none         &none           &none
                 &trans   &none &none     &none      &none         &none                          &none    &none        &none        &none         &none           &none
                                          &to BASE   &trans        &trans                         &mo TSIZ &trans       &trans
             >;
