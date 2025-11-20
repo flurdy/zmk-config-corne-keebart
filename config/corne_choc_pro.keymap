@@ -274,9 +274,9 @@
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
-            // | BASE |     |     |     |     |     |       |       |     |      |     |     |     |   |
-            // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
-            // |      |     |     |     |     |     |               |     |      |     |     |     |   |
+            // | BASE |     |     |     |     |      |       |       |     |      |     |     |     |   |
+            // |      |     |     |     |     | TMED |       |       |     |      |     |     |     |   |
+            // |      |     |     |     |     | TERM |               |     |      |     |     |     |   |
             //                    |     |     |     |               |     |      |     |
             // -----------------------------------------------------------------------------------------
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
@@ -284,10 +284,10 @@
             // |      |     |     |     |     |     |               |     |      |     |     |     |   |
             //                    |     |     |     |               |     |      |     |
             bindings = <
-                &to BASE &none &none &none    &none  &none &none  &none &none  &none  &none &none &none &none
-                &trans   &none &none &none    &none  &none &none  &none &none  &none  &none &none &none &none
-                &trans   &none &none &none    &none  &none              &none  &none  &none &none &none &none
-                                     &to BASE &trans &trans             &trans &trans &trans
+                &to BASE &none &none &none    &none  &none             &none  &none  &none         &none  &none  &none &none        &none
+                &trans   &none &none &none    &none  &kp LC(LS(LA(K))) &none  &none  &none         &none  &none  &none &none        &none
+                &trans   &none &none &none    &none  &kp LC(GRAVE)                   &kp LC(LS(N)) &none  &none  &none &kp LC(FSLH) &none
+                                     &to BASE &trans &trans                          &mo CSLP      &trans &trans
             >;
         };
 
@@ -309,8 +309,8 @@
             // |      |     |     |     |     |     |               |     |      |     |     |     |   |
             //                    |     |     |     |               |     |      |     |
             bindings = <
-                &to BASE &none &none &none    &none  &none &none  &none &none  &none  &none &none &none &none
-                &trans   &none &none &none    &none  &none &none  &none &none  &none  &none &none &none &none
+                &to BASE &none &none &none    &none  &none &none  &none &none  &none  &none &none &kp LC(LA(LEFT)) &none
+                &trans   &none &none &none    &none  &none &none  &none &none  &none  &none &none &kp LC(LA(RIGHT)) &none
                 &trans   &none &none &none    &none  &none              &none  &none  &none &none &none &none
                                      &to BASE &trans &trans             &trans &trans &trans
             >;
@@ -384,9 +384,9 @@
             // |      |     |     |     |     |     |           |     |      |     |     |     |   |
             //                    |     |     |     |           |     |      |     |
             bindings = <
-                &to BASE &none &none &none    &none  &none &none  &none &none  &none  &none &none &none &none
-                &trans   &none &none &none    &none  &none &none  &none &none  &none  &none &none &none &none
-                &trans   &none &none &none    &none  &none              &none  &none  &none &none &none &none
+                &to BASE &none &none &none    &none  &none &none  &none &none  &none  &none &none     &kp RA(W) &none
+                &trans   &none &none &none    &none  &none &none  &none &none  &none  &none &kp RA(R) &kp RA(Z) &none
+                &trans   &none &none &none    &none  &none              &none  &none  &none &none     &none     &none
                                      &to BASE &trans &trans             &trans &trans &trans
             >;
         };
