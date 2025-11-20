@@ -174,9 +174,9 @@
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
-            // | BASE |     |     |     |     |     |       |       |     |      |     |     |     |   |
-            // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
-            // |      |     |     |     |     |     |               |     |      |     |     |     |   |
+            // | BASE | "|" |  #  |  £  |  `  |  "  |       |       |  ^  |      |     |     |  "  |   |
+            // |      |  @  |  _  |  :  |  (  |  )  |       |       |     |      |     |     |     |   |
+            // |      |  \  |  &  |  $  |  {  |  }  |               |     |      |  ;  |  :  |  ?  |   |
             //                    |     |     |     |               |     |      |     |
             // -----------------------------------------------------------------------------------------
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
@@ -184,10 +184,10 @@
             // |      |     |     |     |     |     |               |     |      |     |     |     |   |
             //                    |     |     |     |               |     |      |     |
             bindings = <
-                &to BASE &trans &trans &trans   &trans &trans &none &none &trans &trans &trans &trans &trans &none
-                &trans   &trans &trans &trans   &trans &trans &none &none &trans &trans &trans &trans &trans &none
-                &trans   &trans &trans &trans   &trans &trans             &trans &trans &trans &trans &trans &none
-                                       &to BASE &trans &trans             &trans &trans &trans
+                &to BASE &kp LS(NUBS) &none         &none     &kp GRAVE &kp AT   &none &none &kp LS(N6) &trans &trans   &trans &kp AT    &none
+                &trans   &kp LATS DQT &kp LS(MINUS) &kp COLON &kp LPAR  &kp RPAR &none &none &trans     &trans &trans   &trans &trans    &none
+                &trans   &none55      &none         &none     &kp LBRC  &kp RBRC             &none      &none  &kp SEMI &none  &kp QMARK &none
+                                      &to BASE      &trans    &trans                         &trans     &trans &trans
             >;
         };
 
