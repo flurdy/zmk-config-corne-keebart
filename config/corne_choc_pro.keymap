@@ -209,7 +209,7 @@
             // |      |     |     |     |     |     |               |     |      |     |     |     |   |
             //                    |     |     |     |               |     |      |     |
             bindings = <
-                &to BASE &none     &none     &none     &none     &none         &none  &none &kp LC(HOME) &hp HOME     &kp UP   &kp END     &kp PG_UP &none
+                &to BASE &none     &none     &none     &none     &none         &none  &none &kp LC(HOME) &kp HOME     &kp UP   &kp END     &kp PG_UP &none
                 &trans   &kp LC(A) &kp LC(S) &kp LC(D) &kp LC(F) &none         &none  &none &kp LC(LEFT) &kp LEFT     &kp DOWN &kp RIGHT   &kp PG_DN &none
                 &trans   &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(LS(Z))              &none        &kp LC(HOME) &none    &kp LC(END) &none     &none
                                              &to BASE  &trans    &trans                     &trans       &trans       &trans
@@ -224,10 +224,10 @@
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
-            // | BASE | PRNT | f12 |  f7 | f8  | f9  |     |       |       |     |      |     |     |     |   |
-            // | CAPS | SCLK | f11 |  f4 | f5  | f6  |     |       |       |     |      |     |     |     |   |
-            // | PAUS | NMLK | f10 |  f1 | f2  | f3  |     |               |     |      |     |     |     |   |
-            //                    |     |     |     |               |     |      |     |
+            // | BASE | PRNT | f12 | f7 | f8  | f9 | f12 |       |       |     |      |     |     |     |   |
+            // | CAPS | SCLK | f11 | f4 | f5  | f6 | f11 |       |       |     |      |     |     |     |   |
+            // | PAUS | NMLK | f10 | f1 | f2  | f3 | f10 |               |     |      |     |     |     |   |
+            //                          |     |    |     |               |     |      |     |
             // -----------------------------------------------------------------------------------------
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
@@ -237,7 +237,7 @@
                 &to BASE        &kp PSCRN  &kp F7 &kp F8   &kp F9 &kp F12 &none  &none &none &trans &trans &trans &trans &trans &none
                 &kp CAPS        &kp SLCK   &kp F4 &kp F5   &kp F6 &kp F11 &none  &none &none &trans &trans &trans &trans &trans &none
                 &kp PAUSE_BREAK &kp KP_NUM &kp F1 &kp F2   &kp F3 &kp F10              &none &trans &trans &trans &trans &trans &none
-                                                  &to BASE &trans &trans             &trans &trans &trans
+                                                  &to BASE &trans &trans               &trans &trans &trans
             >;
         };
 
@@ -249,20 +249,20 @@
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
-            // | BASE |     |     |     |     |     |       |       |     |      |     |     |     |   |
-            // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
-            // |      |     |     |     |     |     |               |     |      |     |     |     |   |
-            //                    |     |     |     |               |     |      |     |
+            // | BASE |     |      |     |     | PWR  |       |       |     |      |     |     |     |   |
+            // |      |     | BOOT |     |     |      |       |       |     |      |     |     |     |   |
+            // |      |     |      |     |     |      |               |     |      |     |     |     |   |
+            //                     |     |     | LOCK |               |     |      |     |
             // -----------------------------------------------------------------------------------------
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
             // |      |     |     |     |     |     |               |     |      |     |     |     |   |
             //                    |     |     |     |               |     |      |     |
             bindings = <
-                &to BASE &trans &trans &trans   &trans &trans &none &none &trans &trans &trans &trans &trans &none
-                &trans   &trans &trans &trans   &trans &trans &none &none &trans &trans &trans &trans &trans &none
-                &trans   &trans &trans &trans   &trans &trans             &trans &trans &trans &trans &trans &none
-                                       &to BASE &trans &trans             &trans &trans &trans
+                &to BASE &trans &trans      &trans   &trans &kp K_SLEEP &none &none &trans   &trans &trans   &trans     &kp C_VOL_UP &none
+                &trans   &trans &bootloader &trans   &trans &trans      &none &none &trans   &trans &kp K_PP &trans     &kp C_VOL_DN &none
+                &trans   &trans &trans      &trans   &trans &trans                  &trans   &trans &trans   &kp K_MUTE &trans       &none
+                                            &to BASE &trans &kp K_LOCK              &kp K_PP &trans &trans
             >;
         };
 
