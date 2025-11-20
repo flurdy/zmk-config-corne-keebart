@@ -184,10 +184,10 @@
             // |      |     |     |     |     |     |               |     |      |     |     |     |   |
             //                    |     |     |     |               |     |      |     |
             bindings = <
-                &to BASE &kp LS(NUBS) &LS(N3)       &none     &kp GRAVE &kp AT   &none &none &kp LS(N6) &trans &trans   &trans    &kp AT    &none
-                &trans   &kp LATS DQT &kp LS(MINUS) &kp COLON &kp LPAR  &kp RPAR &none &none &trans     &trans &trans   &trans    &trans    &none
-                &trans   &kp NUBS     &kp AMPS      &kp DLLR  &kp LBRC  &kp RBRC             &none      &none  &kp SEMI &kp COLON &kp QMARK &none
-                                      &to BASE      &trans    &trans                         &trans     &trans &trans
+                &to BASE &kp LS(NUBS) &kp HASH      &kp LS(N3) &kp GRAVE &kp AT   &none &none &kp LS(N6) &trans &trans   &trans    &kp AT    &none
+                &trans   &kp DQT      &kp LS(MINUS) &kp COLON  &kp LPAR  &kp RPAR &none &none &trans     &trans &trans   &trans    &trans    &none
+                &trans   &kp NUBS     &kp AMPS      &kp DLLR   &kp LBRC  &kp RBRC             &none      &none  &kp SEMI &kp COLON &kp QMARK &none
+                                                    &to BASE   &trans    &trans                          &trans trans    &trans
             >;
         };
 
@@ -199,20 +199,20 @@
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
-            // | BASE |     |     |     |     |     |       |       | TOP | HOME |  UP  | END   | PGUP |   |
-            // |      |     |     |     |     |     |       |       | <<  | LEFT | DOWN | RIGHT | PGDN |   |
-            // |      |     |     |     |     |     |               |     |      |      |       |      |   |
-            //                    |     |     |     |               |     |      |      |
+            // | BASE |     |      |      |     |     |       |       | TOP | HOME |  UP  | END   | PGUP |   |
+            // |      | SEL | RLOD | SAVE |     |     |       |       | <<  | LEFT | DOWN | RIGHT | PGDN |   |
+            // |      |     |      |      |     |     |               |     |      |      |       |      |   |
+            //                     |      |     |     |               |     |      |      |
             // -----------------------------------------------------------------------------------------
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
             // |      |     |     |     |     |     |               |     |      |     |     |     |   |
             //                    |     |     |     |               |     |      |     |
             bindings = <
-                &to BASE &trans &trans &trans   &trans &trans &none &none &kp LC(HOME) &hp HOME     &kp UP   &kp END     &kp PGUP &none
-                &trans   &trans &trans &trans   &trans &trans &none &none &kp LC(LEFT) &kp LEFT     &kp DOWN &kp RIGHT   &kp PGDN &none
-                &trans   &trans &trans &trans   &trans &trans             &none        &kp LC(HOME) &none    &kp LC(END) &none    &none
-                                       &to BASE &trans &trans             &trans &trans   &trans
+                &to BASE &none  &none     &none     &none     &none &none &none &kp LC(HOME) &hp HOME     &kp UP   &kp END     &kp PGUP &none
+                &trans   &none  &kp LC(S) &kp LC(D) &kp LC(F) &none &none &none &kp LC(LEFT) &kp LEFT     &kp DOWN &kp RIGHT   &kp PGDN &none
+                &trans   &none  &none     &none     &none     &none             &none        &kp LC(HOME) &none    &kp LC(END) &none    &none
+                                          &to BASE  &trans    &trans            &trans       &trans       &trans
             >;
         };
 
