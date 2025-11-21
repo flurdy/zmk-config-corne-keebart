@@ -292,10 +292,10 @@
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
-            // | BASE |     |     |     |     |     |     |     |     |      |     |     |     |   |
-            // |      |     |     |     |     |     |     |     |     |       |     |     |     |   |
-            // |      |     |     |     |     |     |           |     |      |     |     |     |   |
-            //                    |     |     |     |           |     |      |     |
+            // | BASE |     |     |     |     |     |     |     |      |       | MsUp |      | WhDn |   |
+            // |      |     |     |     |     |     |     |     |      |  MLft | MDwn | MRig | WhUp |   |
+            // |      |     |     |     |     |     |           |      |       |      |      |      |   |
+            //                    |     |     |     |           | LClk | MClk  | RClk |
             // -----------------------------------------------------------------------------------------
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
@@ -305,7 +305,7 @@
                 &to BASE &none &none &none    &none  &none &none  &none  &none     &none          &mmv MOVE_UP   &none           &msc SCRL_DOWN &none
                 &trans   &none &none &none    &none  &none &none  &none  &none     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_UP   &none
                 &trans   &none &none &none    &none  &none               &none     &none          &none          &none           &none          &none
-                                     &to BASE &trans &trans              &mkb LCLK &mkb MCLK      &mbk RCLK
+                                     &to BASE &trans &trans              &mkp LCLK &mkp MCLK      &mbp RCLK
 
            //     &trans   &none &none &none    &none  &none  &none  &none &none  &none  &none  &none &none &none
            //     &trans   &none &none &none    &none  &none  &none  &none &none  &none  &none  &none &none &none
