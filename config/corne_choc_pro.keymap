@@ -305,7 +305,7 @@
                 &to BASE &none &none &none    &none  &none &none  &none  &none     &none          &mmv MOVE_UP   &none           &msc SCRL_DOWN &none
                 &trans   &none &none &none    &none  &none &none  &none  &none     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_UP   &none
                 &trans   &none &none &none    &none  &none               &none     &none          &none          &none           &none          &none
-                                     &to BASE &trans &trans              &mkp LCLK &mkp MCLK      &mbp RCLK
+                                     &to BASE &trans &trans              &mkp LCLK &mkp MCLK      &mkp RCLK
 
            //     &trans   &none &none &none    &none  &none  &none  &none &none  &none  &none  &none &none &none
            //     &trans   &none &none &none    &none  &none  &none  &none &none  &none  &none  &none &none &none
@@ -452,10 +452,10 @@
             // |      |    | RGB |    |    |     |           |      | BT0 | BT1 | BT2 |     |   |
             //                   |    |    |     |           |      |     |     |
             bindings = <
-                &to BASE &none &none           &none    &none &none &none  &none &bt BT_CLR &none        &none        &none        &none &none
-                &none    &none &none           &none    &none &none &none  &none &none      &none        &none        &none        &none &none
-                &none    &none &rgb_ug RGB_TOG &none    &none &none              &none      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none &none
-                                               &to BASE &none &none              &none      &none        &none
+                &to BASE &none &none           &none           &none &none &none  &none &bt BT_CLR &none        &none        &none        &none &none
+                &none    &none &none           &none           &none &none &none  &none &none      &none        &none        &none        &none &none
+                &none    &none &rgb_ug RGB_TOG &rgb_ug RGB_EFF &none &none              &none      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none &none
+                                               &to BASE        &none &none              &none      &none        &none
             >;
         };
 
