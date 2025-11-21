@@ -66,15 +66,7 @@
                #binding-cells = <1>;
                bindings =
                    <&kp LC(K)>
-                   <&kp MACRO_PLACEHOLDER>;
-        };
-         vsc2: visual_studio_code_2params {
-               compatible = "zmk,behavior-macro-two-param";
-               #binding-cells = <2>;
-               bindings =
-                   <&kp LC(K)>
-                   <&kp MACRO_PLACEHOLDER>
-                   <&kp MACRO_PLACEHOLDER>;
+                   , <&kp MACRO_PLACEHOLDER>;
         };
     };
 
