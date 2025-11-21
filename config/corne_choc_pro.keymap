@@ -9,6 +9,12 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 
+
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            // ┃                                 CORNE CHOC PRO KEYMAP CONFIGURATION                             ┃
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+
 #define BASE 0
 #define QWER 1
 #define GAME 2
@@ -53,11 +59,26 @@
             hold-trigger-on-release;
         };
     };
-};
 
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-            // ┃                                 CORNE CHOC PRO KEYMAP CONFIGURATION                             ┃
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+    macros {
+         vsc: visual_studio_code {
+               compatible = "zmk,behavior-macro-one-param";
+               #binding-cells = <1>;
+               bindings =
+                   <&kp LC(K)>
+                   <&kp MACRO_PLACEHOLDER>;
+        };
+         vsc2: visual_studio_code_2params {
+               compatible = "zmk,behavior-macro-two-param";
+               #binding-cells = <2>;
+               bindings =
+                   <&kp LC(K)>
+                   <&kp MACRO_PLACEHOLDER>
+                   <&kp MACRO_PLACEHOLDER>;
+        };
+    };
+
+};
 
 / {
     keymap {
@@ -66,9 +87,9 @@
         default_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
             // ┃                                                 ┃
-                      label = "BASE";
-                      display-name = "Colemak";
-            // ┃      note: OS layout                            ┃
+                      label = "BASE";           //               ┃
+                      display-name = "Colemak"; //               ┃
+            // ┃      note: If OS layout is COLEMAK              ┃
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // --------------------------------------------------------------------------------
@@ -82,10 +103,10 @@
             // |    |      | COMP |       | CODE  | NORW |           |      | FUNC  |       | COMP | MEDI |  |
             //                    |       |       |      |           |      |       |       |
             bindings = <
-                &to QWER  &mt RGUI Q  &mt RALT W     &mt RSHFT E  &mt RCTRL R    &lt BLUE T   &none   &none &kp Y        &mt RCTRL U   &mt RSHFT I  &mt RALT O       &mt RGUI P     &none
+                &to QWER  &hml RGUI Q &hml RALT W    &hml RSHFT E &hml RCTRL R   &lt BLUE T   &none   &none &kp Y        &hmr RCTRL U  &hmr RSHFT I &hmr RALT O      &hmr RGUI P    &none
                 &kp BSPC  &hml LGUI A &hml LALT S    &hml LSHFT D &hml LCTRL F   &lt TILE G   &none   &none &lt CODE H   &hmr LCTRL J  &hmr LSHFT K &hmr LALT L      &hmr LGUI SEMI &none
                 &kp LSHFT &kp NUBS    &mt LS(RALT) Z &kp X        &lt CODE  C    &lt NORW V                 &kp N        &lt FUNC M    &kp COMMA    &mt LS(RALT) DOT &lt MEDI FSLH  &none
-                                                    &kp ESC     &lt NUMB SPACE &lt NAVI TAB               &lt SYMB RET &lt NUMB BSPC &kp DEL
+                                                     &kp ESC      &lt NUMB SPACE &lt NAVI TAB               &lt SYMB RET &lt NUMB BSPC &kp DEL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
@@ -93,9 +114,10 @@
         qwerty_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
             // ┃                                                 ┃
-                      label = "QWER";
-                      display-name = "QWERTY";
-            // ┃      note:                                      ┃
+                      label = "QWER";          //                ┃
+                      display-name = "QWERTY"; //                ┃
+            // ┃      note: If OS layout is QWERTY               ┃
+            // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
             // | GAME |  Q  |  W  |  E  |  R  |  T   |       |       |  Y  |  U   |  I  |  O  |  P  |   |
@@ -108,10 +130,10 @@
             // |      |     |     |     |     |     |               |     |      |     |     |     |      |
             //                    |     |     |     |               |     |      |     |
             bindings = <
-                &to GAME &kp Q &kp W &kp F &kp P    &kp B &trans &trans &kp J   &kp L  &kp U    &kp Y    &kp SEMI &trans
-                &kp TAB  &kp A &kp R &kp S &kp T    &kp G &trans &trans &kp M   &kp N  &kp E    &kp I    &kp O    &trans
-                &trans   &kp Z &kp X &kp C &kp D    &kp V               &kp K   &kp H  &kp COMMA &kp DOT &kp FSLH &trans
-                                   &trans &kp SPACE &kp LCTRL           &kp RET &trans &trans
+                &to GAME &kp Q &kp W &kp F  &kp P     &kp B &trans &trans &kp J   &kp L  &kp U    &kp Y    &kp DQT &trans
+                &kp TAB  &kp A &kp R &kp S  &kp T     &kp G &trans &trans &kp M   &kp N  &kp E    &kp I    &kp O    &trans
+                &trans   &kp Z &kp X &kp C  &kp D     &kp V               &kp K   &kp H  &kp COMMA &kp DOT &kp FSLH &trans
+                                     &trans &kp SPACE &kp LCTRL           &kp RET &trans &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
@@ -128,7 +150,7 @@
             // | BASE |  Q  |  W  |  F  |  P  |  B  |     |     |  J  |  L   |  U  |  Y  |  '  |  |
             // | TAB  |  A  |  R  |  S  |  T  |  G  |     |     |  M  |  N   |  E  |  I  |  O  |  |
             // | SHFT |  Z  |  X  |  C  |  D  |  V  |           |  K  |  H   |  ,  |  .  |  /  |  |
-            //                    | ESC | SPC | TAB |               | ENT | BSPC | DEL |
+            //                    | ESC | SPC | TAB |           | ENT | BSPC | DEL |
             // -----------------------------------------------------------------------------------------
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
@@ -137,8 +159,8 @@
             bindings = <
                 &to BASE  &kp Q    &kp W &kp E  &kp R     &kp T &none  &none &kp Y   &kp U  &kp I     &kp O   &kp P    &none
                 &kp TAB   &kp A    &kp S &kp D  &kp F     &kp G &none  &none &kp H   &kp J  &kp K     &kp L   &kp SEMI &none
-                &trans    &kp NUBS &kp X &kp C  &kp V     &kp B              &kp N   &kp M  &kp COMMA &kp DOT &kp FSLH &none
-                                      &trans &kp SPACE &kp LCTRL          &kp RET &trans &trans
+                &trans    &kp NUBS &kp Z &kp X  &kp C     &kp V              &kp N   &kp M  &kp COMMA &kp DOT &kp FSLH &none
+                                         &trans &kp SPACE &kp LCTRL          &kp RET &trans &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
@@ -147,7 +169,7 @@
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
             // ┃                                                 ┃
                       label = "NUMB";
-                      display-name = "NUMBER";
+                      display-name = "Number";
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
@@ -172,7 +194,7 @@
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
             // ┃                                                 ┃
                       label = "SYMB";
-                      display-name = "S";
+                      display-name = "Symbol";
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
@@ -276,10 +298,10 @@
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
-            // | BASE |     |     |     |     |     |       |       |     |      |     |     |     |   |
-            // |      |     |     |     |     |     |       |       |     |       |     |     |     |   |
-            // |      |     |     |     |     |     |               |     |      |     |     |     |   |
-            //                    |     |     |     |               |     |      |     |
+            // | BASE |     |     |     |     |     |     |     |     |      |     |     |     |   |
+            // |      |     |     |     |     |     |     |     |     |       |     |     |     |   |
+            // |      |     |     |     |     |     |           |     |      |     |     |     |   |
+            //                    |     |     |     |           |     |      |     |
             // -----------------------------------------------------------------------------------------
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
@@ -303,20 +325,20 @@
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
-            // | BASE |     |     |     |     |      |       |       |     |      |     |     |     |   |
-            // |      |     |     |     |     | TMED |       |       |     |      |     |     |     |   |
-            // |      |     |     |     |     | TERM |               |     |      |     |     |     |   |
-            //                    |     |     |     |               |     |      |     |
+            // | BASE |     |     |      |     |      |     |     | Impl | Ref | Dupe Up |     |     |   |
+            // |      |     |     | Save |     | TMED |     |     |      |     | Dupe Dn |     |     |   |
+            // |      |     |     |      |     | TERM |           |      |     |         |     |     |   |
+            //                    |      |     |      |           |      |     |         |
             // -----------------------------------------------------------------------------------------
-            // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
-            // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
-            // |      |     |     |     |     |     |               |     |      |     |     |     |   |
-            //                    |     |     |     |               |     |      |     |
+            // |      |     |     |     |     |     |     |     |     |      |     |     |     |   |
+            // |      |     |     |     |     |     |     |     |     |      |     |     |     |   |
+            // |      |     |     |     |     |     |           |     |      |     |     |     |   |
+            //                    |     |     |     |           |     |      |     |
             bindings = <
-                &to BASE &none &none &none    &none  &none             &none  &none  &none         &none  &none  &none &none        &none
-                &trans   &none &none &none    &none  &kp LC(LS(LA(K))) &none  &none  &none         &none  &none  &none &none        &none
-                &trans   &none &none &none    &none  &kp LC(GRAVE)                   &kp LC(LS(N)) &none  &none  &none &kp LC(FSLH) &none
-                                     &to BASE &trans &trans                          &mo CSLP      &trans &trans
+                &to BASE &none &none &none    &none  &none             &none  &none  &kp LC(F12)   &kp LS(LA(F12)) &vsc LC(LS(UP))   &none &none        &none
+                &trans   &none &none &vsc R   &none  &kp LC(LS(LA(K))) &none  &none  &none         &none           &vsc LC(LS(DOWN)) &none &none        &none
+                &trans   &none &none &none    &none  &kp LC(GRAVE)                   &kp LC(LS(N)) &none           &none             &none &kp LC(FSLH) &none
+                                     &to BASE &trans &trans                          &mo CSLP      &trans          &trans
             >;
         };
 
@@ -324,24 +346,24 @@
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
             // ┃                                                 ┃
                       label = "CSLP";
-                      display-name = "SplitCode";
+                      display-name = "Split";
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
-            // | BASE |     |     |     |     |     |       |       |     |      |     |     |     |   |
-            // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
-            // |      |     |     |     |     |     |               |     |      |     |     |     |   |
-            //                    |     |     |     |               |     |      |     |
+            // | BASE |     |     |     |     |     |     |     |     |      | SpUp |      |     |   |
+            // |      |     |     |     |     |     |     |     |     | SpLt | SpDn | SpRg |     |   |
+            // |      |     |     |     |     |     |           |     |      |     |       |     |   |
+            //                    |     |     |     |           |     |      |     |
             // -----------------------------------------------------------------------------------------
-            // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
-            // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
-            // |      |     |     |     |     |     |               |     |      |     |     |     |   |
-            //                    |     |     |     |               |     |      |     |
+            // |      |     |     |     |     |     |     |     |     |      |     |     |     |   |
+            // |      |     |     |     |     |     |     |     |     |      |     |     |     |   |
+            // |      |     |     |     |     |     |           |     |      |     |     |     |   |
+            //                    |     |     |     |           |     |      |     |
             bindings = <
-                &to BASE &none &none &none    &none  &none &none  &none &none  &none  &none &none &kp LC(LA(LEFT)) &none
-                &trans   &none &none &none    &none  &none &none  &none &none  &none  &none &none &kp LC(LA(RIGHT)) &none
-                &trans   &none &none &none    &none  &none              &none  &none  &none &none &none &none
-                                     &to BASE &trans &trans             &trans &trans &trans
+                &to BASE &none &none &none    &none  &none &none  &none &none  &none         &vsc LS(UP)   &none          &kp LC(LA(LEFT))  &none
+                &trans   &none &none &none    &none  &none &none  &none &none  &vsc LS(LEFT) &vsc LS(DOWN) &vsc LS(RIGHT) &kp LC(LA(RIGHT)) &none
+                &trans   &none &none &none    &none  &none              &none  &none         &none         &none          &none             &none
+                                     &to BASE &trans &trans             &trans &trans        &trans
             >;
         };
 
@@ -415,7 +437,7 @@
             bindings = <
                 &to BASE &none &none &none    &none  &none &none  &none &none  &none  &none &none     &kp RA(W)    &none
                 &trans   &none &none &none    &none  &none &none  &none &none  &none  &none &kp RA(R) &kp RA(NUBS) &none
-                &trans   &none &none &none    &none  &none              &none  &none  &none &none     &none        &none
+                &trans   &none &none &none    &none  &none              &none  &none  &none &kp RA(P) &kp RA(Z)    &none
                                      &to BASE &trans &trans             &trans &trans &trans
             >;
         };
