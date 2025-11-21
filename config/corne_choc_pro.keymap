@@ -66,6 +66,7 @@
                #binding-cells = <1>;
                bindings =
                    <&kp LC(K)>
+                   , <&macro_param_1to1>
                    , <&kp MACRO_PLACEHOLDER>;
         };
     };
