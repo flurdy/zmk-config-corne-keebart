@@ -18,19 +18,21 @@ t/*
 
 #define BASE 0
 #define QWER 1
-#define GAME 2
-#define NUMB 3
-#define SYMB 4
-#define NAVI 5
-#define FUNC 6
-#define MEDI 7
-#define MOUS 8
-#define CODE 9
-#define CSLP 10
-#define TILE 11
-#define TSIZ 12
-#define NORW 13
-#define BLUE 14
+#define QGAM 2
+#define GAME 3
+#define NUMB 4
+#define SYMB 5
+#define NAVI 6
+#define FUNC 7
+#define MEDI 8
+#define MOUS 9
+#define MWHL 10
+#define CODE 11
+#define CSLP 12
+#define TILE 13
+#define TSIZ 14
+#define NORW 15
+#define BLUE 16
 
 / {
     chosen {
@@ -99,7 +101,7 @@ t/*
             bindings = <
                 &to QWER  &hml RGUI Q &hml RALT W    &hml RSHFT E &hml RCTRL R   &lt BLUE T   &none   &none &kp Y        &hmr RCTRL U  &hmr RSHFT I &hmr RALT O      &hmr RGUI P    &none
                 &kp BSPC  &hml LGUI A &hml LALT S    &hml LSHFT D &hml LCTRL F   &lt TILE G   &none   &none &lt CODE H   &hmr LCTRL J  &hmr LSHFT K &hmr LALT L      &hmr LGUI SEMI &none
-                &kp LSHFT &kp NUBS    &mt LS(RALT) Z &kp X        &lt CODE  C    &lt NORW V                 &kp N        &lt FUNC M    &kp COMMA    &mt LS(RALT) DOT &lt MEDI FSLH  &none
+                &kp LSHFT &kp NUBS    &mt LS(RALT) Z &lt MOUS X   &lt CODE  C    &lt NORW V                 &kp N        &lt FUNC M    &kp COMMA    &mt LS(RALT) DOT &lt MEDI FSLH  &none
                                                      &kp ESC      &lt NUMB SPACE &lt NAVI TAB               &lt SYMB RET &lt NUMB BSPC &kp DEL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -114,6 +116,32 @@ t/*
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
+            // | QGAM |  Q  |  W  |  E  |  R  |  T   |       |       |  Y  |  U   |  I  |  O  |  P  |   |
+            // | TAB  |  A  |  S  |  D  |  F  |  G   |       |       |  H  |  J   |  K  |  L  |  '  |   |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B   |               |  N  |  M   |  ,  |  .  |  /  |   |
+            //                    | ESC | SPC | CTRL |               | ENT | BSPC | DEL |
+            // -----------------------------------------------------------------------------------------
+            // |      |     |     |     |     |     |       |       |     |      |     |     |     |      |
+            // |      |     |     |     |     |     |       |       |     |      |     |     |     |      |
+            // |      |     |     |     |     |     |               |     |      |     |     |     |      |
+            //                    |     |     |     |               |     |      |     |
+            bindings = <
+                &to QGAME &hml RGUI Q &hml RALT W    &hml RSHFT F &hml RCTRL P &kp B      &none  &none &kp J      &hmr RCTRL L &hmr RSHFT U &hmr RALT Y &hmr RGUI DQT &none
+                &trans    &hml LGUI A &hml LALT R    &hml LSHFT S &hml LCTRL T &kp G      &none  &none &lt CODE M &hmr LCTRL N &hmr LSHFT E &hmr LALT I &hmr LGUI O   &none
+                &trans    &kp Z       &mt LS(RALT) X &lt MOUS C   &lt CODE D   &lt NORW V              &kp K      &kp H        &trans       &trans      &trans        &none
+                                      &trans         &trans       &trans                               &trans     &trans       &trans
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
+        };
+
+        qwerty_game_layer {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            // ┃                                                 ┃
+                      label = "QGAM";          //                ┃
+                      display-name = "Game Q"; //                ┃
+            // ┃                                                 ┃
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+            // -----------------------------------------------------------------------------------------
             // | GAME |  Q  |  W  |  E  |  R  |  T   |       |       |  Y  |  U   |  I  |  O  |  P  |   |
             // | TAB  |  A  |  S  |  D  |  F  |  G   |       |       |  H  |  J   |  K  |  L  |  '  |   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B   |               |  N  |  M   |  ,  |  .  |  /  |   |
@@ -124,20 +152,19 @@ t/*
             // |      |     |     |     |     |     |               |     |      |     |     |     |      |
             //                    |     |     |     |               |     |      |     |
             bindings = <
-                &to GAME &hml RGUI Q &hml RALT W    &hml RSHFT F &hml RCTRL P &kp B      &none  &none &kp J      &hmr RCTRL L &hmr RSHFT U &hmr RALT Y &hmr RGUI DQT &none
-                &trans   &hml LGUI A &hml LALT R    &hml LSHFT S &hml LCTRL T &kp G      &none  &none &lt CODE M &hmr LCTRL N &hmr LSHFT E &hmr LALT I &hmr LGUI O   &none
-                &trans   &kp Z       &mr LS(RALT) X &kp C        &lt CODE D   &lt NORW V              &kp K      &kp H        &trans       &trans      &trans        &none
-                                     &trans         &trans       &trans                               &trans     &trans       &trans
+                &to GAME  &kp Q &kp W &kp F  &kp P     &kp B  &none  &none &kp J   &kp L  &kp U     &kp Y   &kp DQT  &none
+                &kp TAB   &kp A &kp R &kp S  &kp T     &kp G  &none  &none &kp M   &kp N  &kp E     &kp I   &kp O    &none
+                &kp LSHFT &kp Z &kp X &kp C  &kp D     &kp V               &kp K   &kp H  &kp COMMA &kp DOT &kp FSLH &none
+                                      &trans &kp SPACE &kp LCTRL           &kp RET &trans &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
-
-        game_layer {
+        colemak_game_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
             // ┃                                                 ┃
                       label = "GAME";
-                      display-name = "Game";
+                      display-name = "Game C";
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
@@ -305,12 +332,37 @@ t/*
                 &to BASE &none &none &none    &none  &none &none  &none  &none     &none          &mmv MOVE_UP   &none           &msc SCRL_DOWN &none
                 &trans   &none &none &none    &none  &none &none  &none  &none     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_UP   &none
                 &trans   &none &none &none    &none  &none               &none     &none          &none          &none           &none          &none
-                                     &to BASE &trans &trans              &mkp LCLK &mkp MCLK      &mkp RCLK
+                                     &to BASE &trans &mo MWHL            &mkp LCLK &mkp MCLK      &mkp RCLK
 
            //     &trans   &none &none &none    &none  &none  &none  &none &none  &none  &none  &none &none &none
            //     &trans   &none &none &none    &none  &none  &none  &none &none  &none  &none  &none &none &none
            //     &trans   &none &none &none    &none  &none               &none  &none  &none  &none &none &none
            //                          &to BASE &trans &trans              &trans &trans &trans
+            >;
+        };
+
+        mouse_wheel_layer {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            // ┃                                                 ┃
+                      label = "MWHL";
+                      display-name = "Ms Wheel";
+            // ┃                                                 ┃
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+            // -----------------------------------------------------------------------------------------
+            // | BASE |     |     |     |     |     |     |     |      |       | WhDw |      |     |   |
+            // |      |     |     |     |     |     |     |     |      |  Whft | WhUp | WhRg |     |   |
+            // |      |     |     |     |     |     |           |      |       |      |      |     |   |
+            //                    |     |     |     |           | LClk | MClk  | RClk |
+            // -----------------------------------------------------------------------------------------
+            // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
+            // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
+            // |      |     |     |     |     |     |               |     |      |     |     |     |   |
+            //                    |     |     |     |               |     |      |     |
+            bindings = <
+                &to BASE &none &none &none    &none  &none &none  &none  &none     &none          &msc SCRL_DOWN  &none           &none  &none
+                &trans   &none &none &none    &none  &none &none  &none  &none     &msc SCRL_LEFT &msc SCRL_UP    &msc SCRL_RIGHT &none  &none
+                &trans   &none &none &none    &none  &none               &none     &none          &none           &none           &none  &none
+                                     &to BASE &trans &trans              &mkp LCLK &mkp MCLK      &mkp RCLK
             >;
         };
 
