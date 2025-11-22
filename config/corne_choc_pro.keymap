@@ -97,12 +97,12 @@
             // |    | RGUI | RALT | RSHFT | RCTRL | BLUE |     |     |      | RCTRL | RSHFT | RALT | RGUI |  |
             // |    | GUI  | ALT  | SHFT  | CTRL  | TILE |     |     | CODE | CTRL  | SHFT  | ALT  | GUI  |  |
             // |    |      | COMP |       | CODE  | NORW |           |      | FUNC  |       | COMP | MEDI |  |
-            //                    |       |       |      |           |      |       |       |
+            //                    |       | NUMB  | NAVI |           | SYMB | NUMB  | NAVI  |
             bindings = <
-                &to QWER  &hml RGUI Q &hml RALT W &hml RSHFT E &hml RCTRL R   &lt BLUE T   &none   &none &kp Y        &hmr RCTRL U  &hmr RSHFT I &hmr RALT O       &hmr RGUI P    &none
-                &kp BSPC  &hml LGUI A &hml LALT S &hml LSHFT D &hml LCTRL F   &lt TILE G   &none   &none &lt CODE H   &hmr LCTRL J  &hmr LSHFT K &hmr LALT L       &hmr LGUI SEMI &none
-                &kp LSHFT &kp NUBS    &lt MOUS Z       &kp X   &kp C          &lt NORW V                 &kp N        &lt FUNC M    &kp COMMA    &kp DOT &lt MEDI FSLH  &none
-                                                       &kp ESC &lt NUMB SPACE &lt NAVI TAB               &lt SYMB RET &lt NUMB BSPC &lt NAVI DEL
+                &to QWER  &hml RGUI Q    &hml RALT W &hml RSHFT E &hml RCTRL R   &lt BLUE T   &none   &none &kp Y        &hmr RCTRL U  &hmr RSHFT I &hmr RALT O &hmr RGUI P    &none
+                &kp BSPC  &hml LGUI A    &hml LALT S &hml LSHFT D &hml LCTRL F   &lt TILE G   &none   &none &lt CODE H   &hmr LCTRL J  &hmr LSHFT K &hmr LALT L &hmr LGUI SEMI &none
+                &kp LSHFT &klt MOUS NUBS &kp Z       &lt MOUS X   &lt CODE C     &lt NORW V                 &kp N        &lt FUNC M    &kp COMMA    &kp DOT     &lt MEDI FSLH  &none
+                                                     &kp ESC      &lt NUMB SPACE &lt NAVI TAB               &lt SYMB RET &lt NUMB BSPC &lt NAVI DEL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
@@ -117,19 +117,19 @@
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
             // | QGAM |  Q  |  W  |  E  |  R  |  T   |       |       |  Y  |  U   |  I  |  O  |  P  |   |
-            // | TAB  |  A  |  S  |  D  |  F  |  G   |       |       |  H  |  J   |  K  |  L  |  '  |   |
+            // | BSPC |  A  |  S  |  D  |  F  |  G   |       |       |  H  |  J   |  K  |  L  |  '  |   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B   |               |  N  |  M   |  ,  |  .  |  /  |   |
-            //                    | ESC | SPC | CTRL |               | ENT | BSPC | DEL |
+            //                    | ESC | SPC | TAB  |               | ENT | BSPC | DEL |
             // -----------------------------------------------------------------------------------------
-            // |      |     |     |     |     |     |       |       |     |      |     |     |     |      |
-            // |      |     |     |     |     |     |       |       |     |      |     |     |     |      |
-            // |      |     |     |     |     |     |               |     |      |     |     |     |      |
-            //                    |     |     |     |               |     |      |     |
+            // |    | RGUI | RALT | RSHFT | RCTRL | BLUE |     |     |      | RCTRL | RSHFT | RALT | RGUI |  |
+            // |    | GUI  | ALT  | SHFT  | CTRL  | TILE |     |     | CODE | CTRL  | SHFT  | ALT  | GUI  |  |
+            // |    |      | COMP |       | CODE  | NORW |           |      | FUNC  |       | COMP | MEDI |  |
+            //                    |       | NUMB  | NAVI |           | SYMB | NUMB  | NAVI  |
             bindings = <
-                &to QGAM &hml RGUI Q &hml RALT W     &hml RSHFT F &hml RCTRL P &kp B      &none  &none &kp J      &hmr RCTRL L &hmr RSHFT U &hmr RALT Y &hmr RGUI DQT &none
-                &trans   &hml LGUI A &hml LALT R     &hml LSHFT S &hml LCTRL T &kp G      &none  &none &lt CODE M &hmr LCTRL N &hmr LSHFT E &hmr LALT I &hmr LGUI O   &none
-                &trans   &kp Z       &hml LS(RALT) X &lt MOUS C   &lt CODE D   &lt NORW V              &kp K      &kp H        &trans       &trans      &trans        &none
-                                     &trans          &trans       &trans                               &trans     &trans       &trans
+                &to QGAM &trans       &trans      &hml RSHFT F &hml RCTRL P &kp B  &none  &none &kp J      &hmr RCTRL L &hmr RSHFT U &hmr RALT Y &hmr RGUI DQT &none
+                &trans   &hml LGUI A  &hml LALT R &hml LSHFT S &hml LCTRL T &trans &none  &none &lt CODE M &hmr LCTRL N &hmr LSHFT E &hmr LALT I &hmr LGUI O   &none
+                &trans   &lt MOUS Z   &kp X       &lt MOUS C   &lt CODE D   &trans              &kp K      &lt FUNC H   &trans       &trans      &trans        &none
+                                                  &trans       &trans       &trans              &trans     &trans       &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
@@ -171,7 +171,7 @@
             // | BASE |  Q  |  W  |  F  |  P  |  B   |     |     |  J  |  L   |  U  |  Y  |  '  |  |
             // | CTRL |  A  |  R  |  S  |  T  |  G   |     |     |  M  |  N   |  E  |  I  |  O  |  |
             // | SHFT |  Z  |  X  |  C  |  D  |  V   |           |  K  |  H   |  ,  |  .  |  /  |  |
-            //                    | ESC | SPC | TAB |           | ENT | BSPC | DEL |
+            //                    | ESC | SPC | TAB  |           | ENT | BSPC | DEL |
             // -----------------------------------------------------------------------------------------
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
