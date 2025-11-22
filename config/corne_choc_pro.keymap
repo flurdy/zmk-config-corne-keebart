@@ -47,7 +47,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <7 8 9 10 11 12 13 20 21 22 23 24 25 26 33 34 35 36 37 38 42 43 44>; // List of keys on the right
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 20 21 22 23 24 25 26 33 34 35 36 37 38 39 40 41 42 43 44>; // List of keys on the right and thumbs
             hold-trigger-on-release;
         };
         hmr: home_row_mod_right {
@@ -58,7 +58,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 27 28 29 30 31 32 39 40 41>; // List of keys on the left
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 27 28 29 30 31 32 39 40 41 42 43 44>; // List of keys on the left and thumbs
             hold-trigger-on-release;
         };
     };
@@ -152,10 +152,10 @@
             // |      |     |     |     |     |     |               |     |      |     |     |     |      |
             //                    |     |     |     |               |     |      |     |
             bindings = <
-                &to GAME  &kp Q &kp W &kp F  &kp P     &kp B  &none  &none &kp J   &kp L  &kp U     &kp Y   &kp DQT  &none
-                &kp CTRL  &kp A &kp R &kp S  &kp T     &kp G  &none  &none &kp M   &kp N  &kp E     &kp I   &kp O    &none
-                &kp LSHFT &kp Z &kp X &kp C  &kp D     &kp V               &kp K   &kp H  &kp COMMA &kp DOT &kp FSLH &none
-                                      &trans &kp SPACE &kp TAB             &kp RET &trans &trans
+                &to GAME  &kp Q &kp W &kp F  &kp P     &kp B   &none  &none &kp J   &kp L  &kp U     &kp Y   &kp DQT  &none
+                &kp LCTRL &kp A &kp R &kp S  &kp T     &kp G   &none  &none &kp M   &kp N  &kp E     &kp I   &kp O    &none
+                &kp LSHFT &kp Z &kp X &kp C  &kp D     &kp V                &kp K   &kp H  &kp COMMA &kp DOT &kp FSLH &none
+                                      &trans &kp SPACE &kp TAB              &kp RET &trans &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
@@ -180,7 +180,7 @@
             bindings = <
                 &to BASE  &kp Q    &kp W &kp E  &kp R     &kp T &none  &none &kp Y   &kp U  &kp I     &kp O   &kp P    &none
                 &kp LCTRL &kp A    &kp S &kp D  &kp F     &kp G &none  &none &kp H   &kp J  &kp K     &kp L   &kp SEMI &none
-                &trans    &kp NUBS &kp Z &kp X  &kp C     &kp V              &kp N   &kp M  &kp COMMA &kp DOT &kp FSLH &none
+                &kp LSHFT &kp NUBS &kp Z &kp X  &kp C     &kp V              &kp N   &kp M  &kp COMMA &kp DOT &kp FSLH &none
                                          &trans &kp SPACE &kp TAB            &kp RET &trans &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
