@@ -101,7 +101,7 @@
             bindings = <
                 &to QWER  &hml RGUI Q    &hml RALT W &hml RSHFT E &hml RCTRL R   &lt BLUE T   &none   &none &kp Y        &hmr RCTRL U  &hmr RSHFT I &hmr RALT O &hmr RGUI P    &none
                 &kp BSPC  &hml LGUI A    &hml LALT S &hml LSHFT D &hml LCTRL F   &lt TILE G   &none   &none &lt CODE H   &hmr LCTRL J  &hmr LSHFT K &hmr LALT L &hmr LGUI SEMI &none
-                &kp LSHFT &klt MOUS NUBS &kp Z       &lt MOUS X   &lt CODE C     &lt NORW V                 &kp N        &lt FUNC M    &kp COMMA    &kp DOT     &lt MEDI FSLH  &none
+                &kp LSHFT &lt MOUS NUBS  &kp Z       &lt MOUS X   &lt CODE C     &lt NORW V                 &kp N        &lt FUNC M    &kp COMMA    &kp DOT     &lt MEDI FSLH  &none
                                                      &kp ESC      &lt NUMB SPACE &lt NAVI TAB               &lt SYMB RET &lt NUMB BSPC &lt NAVI DEL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
