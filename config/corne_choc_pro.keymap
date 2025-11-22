@@ -29,8 +29,7 @@
 #define CSLP 12
 #define TILE 13
 #define TSIZ 14
-#define NORW 15
-#define BLUE 16
+#define BLUE 15
 
 / {
     chosen { zmk,physical-layout = &default_layout; };
@@ -81,12 +80,12 @@
             key-positions = <11 12>;
         };
 
-        ae {
+        AE {
             bindings = <&kp RA(R)>;
             key-positions = <24 25>;
         };
 
-        oe {
+        OE {
             bindings = <&kp RA(NUBS)>;
             key-positions = <26 25>;
         };
@@ -116,10 +115,10 @@
             //                    |       | NUMB  | NAVI |           | SYMB | NUMB  | NAVI  |
 
             bindings = <
-&to QWER   &hml RGUI Q    &hml RALT W  &hml RSHFT E  &hml RCTRL R    &lt BLUE T    &none  &none  &kp Y         &hmr RCTRL U   &hmr RSHFT I  &hmr RALT O  &hmr RGUI P     &none
-&kp BSPC   &hml LGUI A    &hml LALT S  &hml LSHFT D  &hml LCTRL F    &lt TILE G    &none  &none  &lt CODE H    &hmr LCTRL J   &hmr LSHFT K  &hmr LALT L  &hmr LGUI SEMI  &none
-&kp LSHFT  &lt MOUS NUBS  &kp Z        &lt MOUS X    &lt CODE C      &lt NORW V                  &kp N         &lt FUNC M     &kp COMMA     &kp DOT      &lt MEDI FSLH   &none
-                                       &kp ESC       &lt NUMB SPACE  &lt NAVI TAB                &lt SYMB RET  &lt NUMB BSPC  &lt NAVI DEL
+&to QWER   &hml RGUI Q    &hml RALT W  &hml RSHFT E  &hml RCTRL R    &lt BLUE T   &none  &none  &kp Y         &hmr RCTRL U   &hmr RSHFT I  &hmr RALT O  &hmr RGUI P     &none
+&kp BSPC   &hml LGUI A    &hml LALT S  &hml LSHFT D  &hml LCTRL F    &lt TILE G   &none  &none  &lt CODE H    &hmr LCTRL J   &hmr LSHFT K  &hmr LALT L  &hmr LGUI SEMI  &none
+&kp LSHFT  &lt MOUS NUBS  &kp Z        &lt MOUS X    &lt CODE C      &kp V                      &kp N         &lt FUNC M     &kp COMMA     &kp DOT      &lt MEDI FSLH   &none
+                                       &kp ESC       &lt NUMB SPACE  &lt NAVI TAB               &lt SYMB RET  &lt NUMB BSPC  &lt NAVI DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -519,34 +518,6 @@
 &trans    &none  &none  &none     &none   &none   &none  &none  &none   &kp LG(MINUS)  &kp LG(LS(MINUS))  &kp LG(EQUAL)  &none  &none
 &trans    &none  &none  &none     &none   &none                 &none   &none          &none              &none          &none  &none
                         &to BASE  &trans  &trans                &trans  &trans         &trans
-            >;
-        };
-
-        norwegian_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-            // ┃                                                 ┃
-
-            label = "NORW";
-            display-name = "Norwegian";
-
-            // ┃                                                 ┃
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            // -----------------------------------------------------------------------------------------
-            // | BASE |     |     |     |     |     |     |     |     |      |     |     | aa  |   |
-            // |      |     |     |     |     |     |     |     |     |      |     |  ae | oe  |   |
-            // |      |     |     |     |     |     |           |     |      |     |     |     |   |
-            //                    |     |     |     |           |     |      |     |
-            // -----------------------------------------------------------------------------------------
-            // |      |     |     |     |     |     |     |     |     |      |     |     |     |   |
-            // |      |     |     |     |     |     |     |     |     |      |     |     |     |   |
-            // |      |     |     |     |     |     |           |     |      |     |     |     |   |
-            //                    |     |     |     |           |     |      |     |
-
-            bindings = <
-&to BASE  &none  &none  &none     &none   &none   &none  &none  &none   &none   &none   &none      &kp RA(W)     &none
-&trans    &none  &none  &none     &none   &none   &none  &none  &none   &none   &none   &kp RA(R)  &kp RA(NUBS)  &none
-&trans    &none  &none  &none     &none   &none                 &none   &none   &none   &kp RA(P)  &kp RA(Z)     &none
-                        &to BASE  &trans  &trans                &trans  &trans  &trans
             >;
         };
 
