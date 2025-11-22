@@ -126,10 +126,10 @@
             // |      |     |     |     |     |     |               |     |      |     |     |     |      |
             //                    |     |     |     |               |     |      |     |
             bindings = <
-                &to QGAME &hml RGUI Q &hml RALT W    &hml RSHFT F &hml RCTRL P &kp B      &none  &none &kp J      &hmr RCTRL L &hmr RSHFT U &hmr RALT Y &hmr RGUI DQT &none
-                &trans    &hml LGUI A &hml LALT R    &hml LSHFT S &hml LCTRL T &kp G      &none  &none &lt CODE M &hmr LCTRL N &hmr LSHFT E &hmr LALT I &hmr LGUI O   &none
-                &trans    &kp Z       &mt LS(RALT) X &lt MOUS C   &lt CODE D   &lt NORW V              &kp K      &kp H        &trans       &trans      &trans        &none
-                                      &trans         &trans       &trans                               &trans     &trans       &trans
+                &to QGAM &hml RGUI Q &hml RALT W    &hml RSHFT F &hml RCTRL P &kp B      &none  &none &kp J      &hmr RCTRL L &hmr RSHFT U &hmr RALT Y &hmr RGUI DQT &none
+                &trans   &hml LGUI A &hml LALT R    &hml LSHFT S &hml LCTRL T &kp G      &none  &none &lt CODE M &hmr LCTRL N &hmr LSHFT E &hmr LALT I &hmr LGUI O   &none
+                &trans   &kp Z       &mt LS(RALT) X &lt MOUS C   &lt CODE D   &lt NORW V              &kp K      &kp H        &trans       &trans      &trans        &none
+                                     &trans         &trans       &trans                               &trans     &trans       &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
