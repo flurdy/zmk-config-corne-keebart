@@ -99,10 +99,10 @@
             // |    |      | COMP |       | CODE  | NORW |           |      | FUNC  |       | COMP | MEDI |  |
             //                    |       |       |      |           |      |       |       |
             bindings = <
-                &to QWER  &hml RGUI Q &hml RALT W    &hml RSHFT E &hml RCTRL R   &lt BLUE T   &none   &none &kp Y        &hmr RCTRL U  &hmr RSHFT I &hmr RALT O      &hmr RGUI P    &none
-                &kp BSPC  &hml LGUI A &hml LALT S    &hml LSHFT D &hml LCTRL F   &lt TILE G   &none   &none &lt CODE H   &hmr LCTRL J  &hmr LSHFT K &hmr LALT L      &hmr LGUI SEMI &none
-                &kp LSHFT &kp NUBS    &mt LS(RALT) Z &lt MOUS X   &lt CODE  C    &lt NORW V                 &kp N        &lt FUNC M    &kp COMMA    &mt LS(RALT) DOT &lt MEDI FSLH  &none
-                                                     &kp ESC      &lt NUMB SPACE &lt NAVI TAB               &lt SYMB RET &lt NUMB BSPC &kp DEL
+                &to QWER  &hml RGUI Q &hml RALT W     &hml RSHFT E &hml RCTRL R   &lt BLUE T   &none   &none &kp Y        &hmr RCTRL U  &hmr RSHFT I &hmr RALT O       &hmr RGUI P    &none
+                &kp BSPC  &hml LGUI A &hml LALT S     &hml LSHFT D &hml LCTRL F   &lt TILE G   &none   &none &lt CODE H   &hmr LCTRL J  &hmr LSHFT K &hmr LALT L       &hmr LGUI SEMI &none
+                &kp LSHFT &kp NUBS    &hml LS(RALT) Z &lt MOUS X   &lt CODE C     &lt NORW V                 &kp N        &lt FUNC M    &kp COMMA    &hmr LS(RALT) DOT &lt MEDI FSLH  &none
+                                                      &kp ESC      &lt NUMB SPACE &lt NAVI TAB               &lt SYMB RET &lt NUMB BSPC &kp DEL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
@@ -111,7 +111,7 @@
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
             // ┃                                                 ┃
                       label = "QWER";          //                ┃
-                      display-name = "QWERTY"; //                ┃
+                      display-name = "Qwerty"; //                ┃
             // ┃      note: If OS layout is QWERTY               ┃
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
@@ -126,10 +126,10 @@
             // |      |     |     |     |     |     |               |     |      |     |     |     |      |
             //                    |     |     |     |               |     |      |     |
             bindings = <
-                &to QGAM &hml RGUI Q &hml RALT W    &hml RSHFT F &hml RCTRL P &kp B      &none  &none &kp J      &hmr RCTRL L &hmr RSHFT U &hmr RALT Y &hmr RGUI DQT &none
-                &trans   &hml LGUI A &hml LALT R    &hml LSHFT S &hml LCTRL T &kp G      &none  &none &lt CODE M &hmr LCTRL N &hmr LSHFT E &hmr LALT I &hmr LGUI O   &none
-                &trans   &kp Z       &mt LS(RALT) X &lt MOUS C   &lt CODE D   &lt NORW V              &kp K      &kp H        &trans       &trans      &trans        &none
-                                     &trans         &trans       &trans                               &trans     &trans       &trans
+                &to QGAM &hml RGUI Q &hml RALT W     &hml RSHFT F &hml RCTRL P &kp B      &none  &none &kp J      &hmr RCTRL L &hmr RSHFT U &hmr RALT Y &hmr RGUI DQT &none
+                &trans   &hml LGUI A &hml LALT R     &hml LSHFT S &hml LCTRL T &kp G      &none  &none &lt CODE M &hmr LCTRL N &hmr LSHFT E &hmr LALT I &hmr LGUI O   &none
+                &trans   &kp Z       &hml LS(RALT) X &lt MOUS C   &lt CODE D   &lt NORW V              &kp K      &kp H        &trans       &trans      &trans        &none
+                                     &trans          &trans       &trans                               &trans     &trans       &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
@@ -143,9 +143,9 @@
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
             // | GAME |  Q  |  W  |  E  |  R  |  T   |       |       |  Y  |  U   |  I  |  O  |  P  |   |
-            // | TAB  |  A  |  S  |  D  |  F  |  G   |       |       |  H  |  J   |  K  |  L  |  '  |   |
+            // | CTRL |  A  |  S  |  D  |  F  |  G   |       |       |  H  |  J   |  K  |  L  |  '  |   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B   |               |  N  |  M   |  ,  |  .  |  /  |   |
-            //                    | ESC | SPC | CTRL |               | ENT | BSPC | DEL |
+            //                    | ESC | SPC | TAB  |               | ENT | BSPC | DEL |
             // -----------------------------------------------------------------------------------------
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |      |
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |      |
@@ -153,9 +153,9 @@
             //                    |     |     |     |               |     |      |     |
             bindings = <
                 &to GAME  &kp Q &kp W &kp F  &kp P     &kp B  &none  &none &kp J   &kp L  &kp U     &kp Y   &kp DQT  &none
-                &kp TAB   &kp A &kp R &kp S  &kp T     &kp G  &none  &none &kp M   &kp N  &kp E     &kp I   &kp O    &none
+                &kp CTRL  &kp A &kp R &kp S  &kp T     &kp G  &none  &none &kp M   &kp N  &kp E     &kp I   &kp O    &none
                 &kp LSHFT &kp Z &kp X &kp C  &kp D     &kp V               &kp K   &kp H  &kp COMMA &kp DOT &kp FSLH &none
-                                      &trans &kp SPACE &kp LCTRL           &kp RET &trans &trans
+                                      &trans &kp SPACE &kp TAB             &kp RET &trans &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
@@ -168,9 +168,9 @@
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
-            // | BASE |  Q  |  W  |  F  |  P  |  B  |     |     |  J  |  L   |  U  |  Y  |  '  |  |
-            // | TAB  |  A  |  R  |  S  |  T  |  G  |     |     |  M  |  N   |  E  |  I  |  O  |  |
-            // | SHFT |  Z  |  X  |  C  |  D  |  V  |           |  K  |  H   |  ,  |  .  |  /  |  |
+            // | BASE |  Q  |  W  |  F  |  P  |  B   |     |     |  J  |  L   |  U  |  Y  |  '  |  |
+            // | CTRL |  A  |  R  |  S  |  T  |  G   |     |     |  M  |  N   |  E  |  I  |  O  |  |
+            // | SHFT |  Z  |  X  |  C  |  D  |  V   |           |  K  |  H   |  ,  |  .  |  /  |  |
             //                    | ESC | SPC | TAB |           | ENT | BSPC | DEL |
             // -----------------------------------------------------------------------------------------
             // |      |     |     |     |     |     |       |       |     |      |     |     |     |   |
@@ -179,9 +179,9 @@
             //                    |     |     |     |               |     |      |     |
             bindings = <
                 &to BASE  &kp Q    &kp W &kp E  &kp R     &kp T &none  &none &kp Y   &kp U  &kp I     &kp O   &kp P    &none
-                &kp TAB   &kp A    &kp S &kp D  &kp F     &kp G &none  &none &kp H   &kp J  &kp K     &kp L   &kp SEMI &none
+                &kp LCTRL &kp A    &kp S &kp D  &kp F     &kp G &none  &none &kp H   &kp J  &kp K     &kp L   &kp SEMI &none
                 &trans    &kp NUBS &kp Z &kp X  &kp C     &kp V              &kp N   &kp M  &kp COMMA &kp DOT &kp FSLH &none
-                                         &trans &kp SPACE &kp LCTRL          &kp RET &trans &trans
+                                         &trans &kp SPACE &kp TAB            &kp RET &trans &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
@@ -254,10 +254,10 @@
             // |      |     |     |     |     |     |               |     |      |     |     |     |   |
             //                    |     |     |     |               |     |      |     |
             bindings = <
-                &to BASE &none        &none     &none     &none     &none            &none  &none &kp LC(HOME) &kp HOME     &kp UP   &kp END     &kp PG_UP &none
-                &trans   &kp LC(A)    &kp LC(S) &kp LC(D) &kp LC(F) &none            &none  &none &kp LC(LEFT) &kp LEFT     &kp DOWN &kp RIGHT   &kp PG_DN &none
-                &trans   &kp LC(NUBS) &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(LS(NUBS))              &none        &kp LC(HOME) &none    &kp LC(END) &none     &none
-                                                &to BASE  &trans    &trans                           &trans       &trans       &trans
+                &to BASE &none        &none     &none     &none     &none            &none  &none &msc SCRL_DOWN &kp HOME     &kp UP   &kp END     &kp PG_UP &none
+                &trans   &kp LC(A)    &kp LC(S) &kp LC(D) &kp LC(F) &none            &none  &none &msc SCRL_UP   &kp LEFT     &kp DOWN &kp RIGHT   &kp PG_DN &none
+                &trans   &kp LC(NUBS) &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(LS(NUBS))              &none          &kp LC(HOME) &none    &kp LC(END) &none     &none
+                                                &to BASE  &trans    &trans                        &trans         &trans       &trans
             >;
         };
 
@@ -345,7 +345,7 @@
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
             // ┃                                                 ┃
                       label = "MWHL";
-                      display-name = "Ms Wheel";
+                      display-name = "Wheel";
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
