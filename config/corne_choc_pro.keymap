@@ -1,4 +1,4 @@
-/*
+t/*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -124,10 +124,10 @@
             // |      |     |     |     |     |     |               |     |      |     |     |     |      |
             //                    |     |     |     |               |     |      |     |
             bindings = <
-                &to GAME &kp Q &kp W &kp F  &kp P     &kp B &trans &trans &kp J   &kp L  &kp U    &kp Y    &kp DQT &trans
-                &kp TAB  &kp A &kp R &kp S  &kp T     &kp G &trans &trans &kp M   &kp N  &kp E    &kp I    &kp O    &trans
-                &trans   &kp Z &kp X &kp C  &kp D     &kp V               &kp K   &kp H  &kp COMMA &kp DOT &kp FSLH &trans
-                                     &trans &kp SPACE &kp LCTRL           &kp RET &trans &trans
+                &to GAME &hml RGUI Q &hml RALT W    &hml RSHFT F &hml RCTRL P &kp B      &none  &none &kp J      &hmr RCTRL L &hmr RSHFT U &hmr RALT Y &hmr RGUI DQT &none
+                &trans   &hml LGUI A &hml LALT R    &hml LSHFT S &hml LCTRL T &kp G      &none  &none &lt CODE M &hmr LCTRL N &hmr LSHFT E &hmr LALT I &hmr LGUI O   &none
+                &trans   &kp Z       &mr LS(RALT) X &kp C        &lt CODE D   &lt NORW V              &kp K      &kp H        &trans       &trans      &trans        &none
+                                     &trans         &trans       &trans                               &trans     &trans       &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
