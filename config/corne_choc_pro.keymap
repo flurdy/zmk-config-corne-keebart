@@ -335,10 +335,10 @@
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
-            // | BASE |        |      |     |      | PWR  |     |     |      |      |      |      | VOL+ |   |
-            // |      |        | RSET |     |      | BOOT |     |     | BOOT |      | PLAY |      | VOL- |   |
-            // |      | STUDIO |      |     |      |      |           |      |      |      | MUTE |      |   |
-            //                        |     |      | LOCK |           | PLAY |      |      |
+            // | BASE |        |      |      |       |  PWR   |     |     |      |      |      |      | VOL+ |   |
+            // |      |        | RSET |      |       |  BOOT  |     |     | BOOT |      | PLAY |      | VOL- |   |
+            // |      | STUDIO | Hue- | Hue+ | Effct | RgbTog |           |      |      |      | MUTE |      |   |
+            //                        |      |       |  LOCK  |           | PLAY |      |      |
             // -----------------------------------------------------------------------------------------
             // |      |     |     |     |     |     |      |      |     |      |     |     |     |   |
             // |      |     |     |     |     |     |      |      |     |      |     |     |     |   |
@@ -533,26 +533,16 @@
             // -----------------------------------------------------------------------------------------
             // | BASE |    |     |    |    |     |     |     | BTCL |     |     |     |     |   |
             // |      |    |     |    |    |     |     |     |      |     |     |     |     |   |
-            // |      |    | RGB |    |    |     |           |      | BT0 | BT1 | BT2 |     |   |
+            // |      |    |     |    |    |     |           |      | BT0 | BT1 | BT2 |     |   |
             //                   |    |    |     |           |      |     |     |
 
             bindings = <
-&to BASE  &none  &none            &none            &none  &none  &none  &none  &bt BT_CLR  &none         &none         &none         &none  &none
-&none     &none  &none            &none            &none  &none  &none  &none  &none       &none         &none         &none         &none  &none
-&none     &none  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &none  &none                &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none
-                                  &to BASE         &none  &none                &none       &none         &none
+&to BASE  &none  &none &none    &none  &none  &none  &none  &bt BT_CLR  &none         &none         &none         &none         &none
+&none     &none  &none &none    &none  &none  &none  &none  &none       &none         &none         &none         &none         &none
+&none     &none  &none &none    &none  &none                &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none
+                       &to BASE &none  &none                &none       &none         &none
             >;
         };
 
-        bluetooth_layer {
-            label = "BLUE";
-            display-name = "Bluetooth";
-            bindings = <
-&to BASE  &none  &none  &none     &none  &none  &none  &none  &bt BT_CLR  &none         &none         &none         &none         &none
-&none     &none  &none  &none     &none  &none  &none  &none  &none       &none         &none         &none         &none         &none
-&none     &none  &none  &none     &none  &none                &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none
-                        &to BASE  &none  &none                &none       &none         &none
-            >;
-        };
     };
 };
