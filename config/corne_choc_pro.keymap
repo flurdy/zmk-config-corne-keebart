@@ -204,7 +204,7 @@
             // |      |      |      |      |      |     |               |     |      |      |      |      |   |
             //                      |      |      |     |               |     |      |      |
             bindings = <
-                &to BASE &ms RGUI EXCL &kp RALT       &kp RSHFT       &kp RCTRL    &none    &none  &none &none     &mt RCTRL N7 &ms RSHFT N8 &mt RALT N9 &mt RGUI N0 &none
+                &to BASE &mt RGUI EXCL &kp RALT       &kp RSHFT       &kp RCTRL    &none    &none  &none &none     &mt RCTRL N7 &ms RSHFT N8 &mt RALT N9 &mt RGUI N0 &none
                 &trans   &mt LGUI PLUS &mt LALT EQUAL &mt LSHFT MINUS &mt LCTRL LT &kp GT   &none  &none &kp COMMA &mt LCTRL N4 &mt LSHFT N5 &mt LALT N6 &kp LGUI    &none
                 &trans   &kp PIPE      &kp PRCNT      &kp STAR        &kp LBKT     &kp RBKT              &kp DOT   &kp N1       &kp N2       &kp N3      &kp FSLH    &none
                                             &to BASE  &kp SPACE       &kp TAB                            &kp RET   &kp N0       &trans
