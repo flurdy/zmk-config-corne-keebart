@@ -60,6 +60,20 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 27 28 29 30 31 32 39 40 41 42 43 44>; // List of keys on the left and thumbs
             hold-trigger-on-release;
         };
+
+        td_quot: td_quot {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_QUOT";
+            #binding-cells = <0>;
+            bindings = <&mt RGUI P>, <&kp AT>;
+        };
+
+        td_semi: td_semi {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SEMI";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp P>;
+        };
     };
 
     macros {
@@ -115,9 +129,9 @@
             //                    |       | NUMB  | NAVI |           | SYMB | NUMB  | NAVI  |
 
             bindings = <
-&to QWER   &hml RGUI Q    &hml RALT W  &hml RSHFT E  &hml RCTRL R    &lt BLUE T    &none  &none  &kp Y         &hmr RCTRL U   &hmr RSHFT I  &hmr RALT O  &hmr RGUI P     &none
+&to QWER   &hml RGUI Q    &hml RALT W  &hml RSHFT E  &hml RCTRL R    &lt BLUE T    &none  &none  &kp Y         &hmr RCTRL U   &hmr RSHFT I  &hmr RALT O  &td_quot        &none
 &kp BSPC   &hml LGUI A    &hml LALT S  &hml LSHFT D  &hml LCTRL F    &lt TILE G    &none  &none  &lt CODE H    &hmr LCTRL J   &hmr LSHFT K  &hmr LALT L  &hmr LGUI SEMI  &none
-&kp LSHFT  &lt MOUS NUBS  &kp Z        &lt MOUS X    &lt CODE C      &kp V                       &kp N         &lt FUNC M     &kp COMMA     &kp DOT      &lt MEDI FSLH   &none
+&kp LSHFT  &lt MOUS NUBS  &kp Z        &lt MOUS X    &lt CODE C      &kp V                       &kp N         &lt FUNC M     &td_semi      &kp DOT      &lt MEDI FSLH   &none
                                        &kp ESC       &lt NUMB SPACE  &lt NAVI TAB                &lt SYMB RET  &lt NUMB BSPC  &lt NAVI DEL
             >;
 
@@ -537,12 +551,11 @@
             //                   |    |    |     |           |      |     |     |
 
             bindings = <
-&to BASE  &none  &none &none    &none  &none  &none  &none  &bt BT_CLR  &none         &none         &none         &none         &none
-&none     &none  &none &none    &none  &none  &none  &none  &none       &none         &none         &none         &none         &none
-&none     &none  &none &none    &none  &none                &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none
-                       &to BASE &none  &none                &none       &none         &none
+&to BASE  &none  &none  &none     &none  &none  &none  &none  &bt BT_CLR  &none         &none         &none         &none         &none
+&none     &none  &none  &none     &none  &none  &none  &none  &none       &none         &none         &none         &none         &none
+&none     &none  &none  &none     &none  &none                &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none
+                        &to BASE  &none  &none                &none       &none         &none
             >;
         };
-
     };
 };
