@@ -17,19 +17,20 @@
 #define BASE 0
 #define QWER 1
 #define QGAM 2
-#define GAME 3
-#define NUMB 4
-#define SYMB 5
-#define NAVI 6
-#define FUNC 7
-#define MEDI 8
-#define MOUS 9
-#define MWHL 10
-#define CODE 11
-#define CSLP 12
-#define TILE 13
-#define TSIZ 14
-#define BLUE 15
+#define INVR 3
+#define GAME 4
+#define NUMB 5
+#define SYMB 6
+#define NAVI 7
+#define FUNC 8
+#define MEDI 9
+#define MOUS 10
+#define MWHL 11
+#define CODE 12
+#define CSLP 13
+#define TILE 14
+#define TSIZ 15
+#define BLUE 16
 
 / {
     chosen { zmk,physical-layout = &default_layout; };
@@ -177,7 +178,7 @@
             // ┃                                                 ┃
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             // -----------------------------------------------------------------------------------------
-            // | GAME |  Q  |  W  |  E  |  R  |  T   |       |       |  Y  |  U   |  I  |  O  |  P  |   |
+            // | INVR |  Q  |  W  |  E  |  R  |  T   |       |       |  Y  |  U   |  I  |  O  |  P  |   |
             // | CTRL |  A  |  S  |  D  |  F  |  G   |       |       |  H  |  J   |  K  |  L  |  '  |   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B   |               |  N  |  M   |  ,  |  .  |  /  |   |
             //                    | ESC | SPC | TAB  |               | ENT | BSPC | DEL |
@@ -192,6 +193,35 @@
 &kp LCTRL  &kp A  &kp R  &kp S   &kp T      &kp G    &none  &none  &kp M    &kp N   &kp E      &kp I    &kp O     &none
 &kp LSHFT  &kp Z  &kp X  &kp C   &kp D      &kp V                  &kp K    &kp H   &kp COMMA  &kp DOT  &kp FSLH  &none
                          &trans  &kp SPACE  &kp TAB                &kp RET  &trans  &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
+        };
+
+        invert_game_layer {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            // ┃                                                 ┃
+
+            label = "INVR";          //                ┃
+            display-name = "Invert"; //                ┃
+            // ┃                                                 ┃
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+            // -----------------------------------------------------------------------------------------
+            // | GAME |  Q  |  W  |  E  |  R  |  T   |       |       |  Y  |  U   |  I  |  O  |  P  |   |
+            // | CTRL |  A  |  S  |  D  |  F  |  G   |       |       |  H  |  J   |  K  |  L  |  '  |   |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B   |               |  N  |  M   |  ,  |  .  |  /  |   |
+            //                    | ESC | SPC | TAB  |               | ENT | BSPC | DEL |
+            // -----------------------------------------------------------------------------------------
+            // |      |     |     |     |     |     |       |       |     |      |     |     |     |      |
+            // |      |     |     |     |     |     |       |       |     |      |     |     |     |      |
+            // |      |     |     |     |     |     |               |     |      |     |     |     |      |
+            //                    |     |     |     |               |     |      |     |
+
+            bindings = <
+&to GAME   &kp Q    &kp W  &kp K   &kp S      &kp F    &none  &none  &kp O  &kp L   &kp U      &kp DQT  &kp S     &none
+&kp LCTRL  &kp A    &kp D  &kp C   &kp K      &kp G    &none  &none  &kp M  &kp P   &kp J      &kp I    &kp DQT   &none
+&kp LSHFT  &kp NUBS &kp Z  &kp V   &kp R      &kp T                  &kp J  &kp H   &kp COMMA  &kp DOT  &kp FSLH  &none
+                           &trans  &kp SPACE  &kp TAB                &kp RET  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
