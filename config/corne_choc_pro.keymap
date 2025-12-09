@@ -189,7 +189,7 @@
             //                    |     |     |     |               |     |      |     |
 
             bindings = <
-&to GAME   &kp Q  &kp W  &kp F   &kp P      &kp B    &none  &none  &kp J    &kp L   &kp U      &kp Y    &kp DQT   &none
+&to INVR   &kp Q  &kp W  &kp F   &kp P      &kp B    &none  &none  &kp J    &kp L   &kp U      &kp Y    &kp DQT   &none
 &kp LCTRL  &kp A  &kp R  &kp S   &kp T      &kp G    &none  &none  &kp M    &kp N   &kp E      &kp I    &kp O     &none
 &kp LSHFT  &kp Z  &kp X  &kp C   &kp D      &kp V                  &kp K    &kp H   &kp COMMA  &kp DOT  &kp FSLH  &none
                          &trans  &kp SPACE  &kp TAB                &kp RET  &trans  &trans
