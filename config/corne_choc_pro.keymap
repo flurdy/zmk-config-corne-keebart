@@ -130,10 +130,10 @@
             //                    |       | NUMB  | NAVI |           | SYMB | NUMB  | NAVI  |
 
             bindings = <
-&to QWER   &hml RGUI Q    &hml RALT W  &hml RSHFT E  &hml RCTRL R    &lt BLUE T    &none  &none  &kp Y         &hmr RCTRL U   &hmr RSHFT I  &hmr RALT O  &td_quot        &none
-&kp BSPC   &hml LGUI A    &hml LALT S  &hml LSHFT D  &hml LCTRL F    &lt TILE G    &none  &none  &lt 14 H      &hmr LCTRL J   &hmr LSHFT K  &hmr LALT L  &hmr LGUI SEMI  &none
-&kp LSHFT  &lt MOUS NUBS  &kp Z        &lt MOUS X    &lt CODE C      &lt 8 V                     &lt 8 K       &lt 12 M       &td_semi      &kp DOT      &lt MEDI FSLH   &none
-                                       &kp ESC       &lt NUMB SPACE  &lt NAVI TAB                &lt SYMB RET  &lt NUMB BSPC  &lt NAVI DEL
+&to 1      &hml RGUI Q  &hml RALT W  &hml RSHFT E  &hml RCTRL R  &lt 16 T   &none  &none  &kp Y      &hmr RCTRL U  &hmr RSHFT I  &hmr RALT O  &td_quot        &none
+&kp BSPC   &hml LGUI A  &hml LALT S  &hml LSHFT D  &hml LCTRL F  &lt 14 G   &none  &none  &lt 14 H   &hmr LCTRL J  &hmr LSHFT K  &hmr LALT L  &hmr LGUI SEMI  &none
+&kp LSHFT  &lt 10 NUBS  &kp Z        &lt 10 X      &lt 12 C      &lt 8 V                  &lt 8 K    &lt 12 M      &td_semi      &kp DOT      &lt 9 FSLH      &none
+                                     &kp ESC       &lt 5 SPACE   &lt 7 TAB                &lt 6 RET  &lt 5 BSPC    &lt 7 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -160,10 +160,10 @@
             //                    |       | NUMB  | NAVI |           | SYMB | NUMB  | NAVI  |
 
             bindings = <
-&to QGAM  &trans       &trans       &hml RSHFT F  &hml RCTRL P  &kp B   &none  &none  &kp J       &hmr RCTRL L  &hmr RSHFT U  &hmr RALT Y  &hmr RGUI DQT  &none
-&trans    &hml LGUI A  &hml LALT R  &hml LSHFT S  &hml LCTRL T  &trans  &none  &none  &lt CODE M  &hmr LCTRL N  &hmr LSHFT E  &hmr LALT I  &hmr LGUI O    &none
-&trans    &lt MOUS Z   &kp X        &lt MOUS C    &lt CODE D    &trans                &kp K       &lt FUNC H    &trans        &trans       &trans         &none
-                                    &trans        &trans        &trans                &trans      &trans        &trans
+&to 2   &trans       &trans       &hml RSHFT F  &hml RCTRL P  &kp B   &none  &none  &kp J     &hmr RCTRL L  &hmr RSHFT U  &hmr RALT Y  &hmr RGUI DQT  &none
+&trans  &hml LGUI A  &hml LALT R  &hml LSHFT S  &hml LCTRL T  &trans  &none  &none  &lt 12 M  &hmr LCTRL N  &hmr LSHFT E  &hmr LALT I  &hmr LGUI O    &none
+&trans  &lt 10 Z     &kp X        &lt 10 C      &lt 12 D      &trans                &kp K     &lt 8 H       &trans        &trans       &trans         &none
+                                  &trans        &trans        &trans                &trans    &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -189,7 +189,7 @@
             //                    |     |     |     |               |     |      |     |
 
             bindings = <
-&to INVR   &kp Q  &kp W  &kp F   &kp P      &kp B      &none  &none  &kp J    &kp L   &kp U      &kp Y    &kp DQT   &none
+&to 3      &kp Q  &kp W  &kp F   &kp P      &kp B      &none  &none  &kp J    &kp L   &kp U      &kp Y    &kp DQT   &none
 &kp TAB    &kp A  &kp R  &kp S   &kp T      &kp G      &none  &none  &kp M    &kp N   &kp E      &kp I    &kp O     &none
 &kp LSHFT  &kp Z  &kp X  &kp C   &kp D      &kp V                    &kp K    &kp H   &kp COMMA  &kp DOT  &kp FSLH  &none
                          &trans  &kp SPACE  &kp LCTRL                &kp RET  &trans  &trans
@@ -218,7 +218,7 @@
             //                    |     |     |     |               |     |      |     |
 
             bindings = <
-&to GAME   &kp Q     &kp W  &kp K   &kp S      &kp F      &none  &none  &kp O    &kp I   &kp L      &kp SEMI  &kp R     &none
+&to 4      &kp Q     &kp W  &kp K   &kp S      &kp F      &none  &none  &kp O    &kp I   &kp L      &kp SEMI  &kp R     &none
 &kp TAB    &kp A     &kp D  &kp C   &kp E      &kp G      &none  &none  &kp M    &kp Y   &kp N      &kp U     &kp DQT   &none
 &kp LSHFT  &kp NUBS  &kp Z  &kp X   &kp V      &kp T                    &kp J    &kp H   &kp COMMA  &kp DOT   &kp FSLH  &none
                             &trans  &kp SPACE  &kp LCTRL                &kp RET  &trans  &trans
@@ -248,7 +248,7 @@
             //                    |     |     |     |               |     |      |     |
 
             bindings = <
-&to BASE   &kp Q     &kp W  &kp E   &kp R      &kp T      &none  &none  &kp Y    &kp U   &kp I      &kp O    &kp P     &none
+&to 0      &kp Q     &kp W  &kp E   &kp R      &kp T      &none  &none  &kp Y    &kp U   &kp I      &kp O    &kp P     &none
 &kp TAB    &kp A     &kp S  &kp D   &kp F      &kp G      &none  &none  &kp H    &kp J   &kp K      &kp L    &kp SEMI  &none
 &kp LSHFT  &kp NUBS  &kp Z  &kp X   &kp C      &kp V                    &kp N    &kp M   &kp COMMA  &kp DOT  &kp FSLH  &none
                             &trans  &kp SPACE  &kp LCTRL                &kp RET  &trans  &trans
@@ -278,10 +278,10 @@
             //                      |      |      |     |               |     |      |      |
 
             bindings = <
-&to BASE  &mt RGUI EXCL  &kp RALT        &kp RSHFT        &kp RCTRL     &none     &none  &none  &none      &mt RCTRL N7  &mt RSHFT N8  &mt RALT N9  &mt RGUI N0  &none
-&trans    &mt LGUI PLUS  &mt LALT EQUAL  &mt LSHFT MINUS  &mt LCTRL LT  &kp GT    &none  &none  &kp COMMA  &mt LCTRL N4  &mt LSHFT N5  &mt LALT N6  &kp LGUI     &none
-&trans    &kp PIPE       &kp PRCNT       &kp STAR         &kp LBKT      &kp RBKT                &kp DOT    &kp N1        &kp N2        &kp N3       &kp FSLH     &none
-                                         &to BASE         &kp SPACE     &kp TAB                 &kp RET    &kp N0        &trans
+&to 0   &mt RGUI EXCL  &kp RALT        &kp RSHFT        &kp RCTRL     &none     &none  &none  &none      &mt RCTRL N7  &mt RSHFT N8  &mt RALT N9  &mt RGUI N0  &none
+&trans  &mt LGUI PLUS  &mt LALT EQUAL  &mt LSHFT MINUS  &mt LCTRL LT  &kp GT    &none  &none  &kp COMMA  &mt LCTRL N4  &mt LSHFT N5  &mt LALT N6  &kp LGUI     &none
+&trans  &kp PIPE       &kp PRCNT       &kp STAR         &kp LBKT      &kp RBKT                &kp DOT    &kp N1        &kp N2        &kp N3       &kp FSLH     &none
+                                       &to 0            &kp SPACE     &kp TAB                 &kp RET    &kp N0        &trans
             >;
         };
 
@@ -306,10 +306,10 @@
             //                    |     |     |     |               |     |      |      |
 
             bindings = <
-&to BASE  &kp LS(B)  &kp NUHS   &kp LS(N3)  &kp GRAVE  &kp AT    &none  &none  &kp CARET  &kp RCTRL  &kp RSHFT  &kp RALT   &mt RGUI AT  &none
-&trans    &kp DQT    &kp UNDER  &kp LS(P)   &kp LPAR   &kp RPAR  &none  &none  &none      &kp LCTRL  &kp LSHFT  &kp LALT   &kp LGUI     &none
-&trans    &kp B      &kp AMPS   &kp DLLR    &kp LBRC   &kp RBRC                &none      &none      &kp P      &kp LS(P)  &kp QMARK    &none
-                                &to BASE    &trans     &trans                  &trans     &trans     &trans
+&to 0   &kp LS(B)  &kp NUHS   &kp LS(N3)  &kp GRAVE  &kp AT    &none  &none  &kp CARET  &kp RCTRL  &kp RSHFT  &kp RALT   &mt RGUI AT  &none
+&trans  &kp DQT    &kp UNDER  &kp LS(P)   &kp LPAR   &kp RPAR  &none  &none  &none      &kp LCTRL  &kp LSHFT  &kp LALT   &kp LGUI     &none
+&trans  &kp B      &kp AMPS   &kp DLLR    &kp LBRC   &kp RBRC                &none      &none      &kp P      &kp LS(P)  &kp QMARK    &none
+                              &to 0       &trans     &trans                  &trans     &trans     &trans
             >;
         };
 
@@ -334,10 +334,10 @@
             //                      |      |      |     |           |     |      |     |
 
             bindings = <
-&to BASE  &kp RGUI        &kp RALT        &kp RSHIFT       &kp RCTRL        &none             &none  &none  &msc SCRL_DOWN  &kp HOME      &kp UP    &kp END      &kp PG_UP  &none
-&trans    &mt LGUI LC(A)  &mt LALT LC(S)  &mt LSHFT LC(D)  &mt LCTRL LC(F)  &none             &none  &none  &msc SCRL_UP    &kp LEFT      &kp DOWN  &kp RIGHT    &kp PG_DN  &none
-&trans    &kp LC(NUBS)    &kp LC(Z)       &kp LC(X)        &kp LC(C)        &kp LC(LS(NUBS))                &none           &kp LC(HOME)  &none     &kp LC(END)  &none      &none
-                                          &to BASE         &trans           &trans                          &trans          &trans        &trans
+&to 0   &kp RGUI        &kp RALT        &kp RSHIFT       &kp RCTRL        &none             &none  &none  &msc SCRL_DOWN  &kp HOME      &kp UP    &kp END      &kp PG_UP  &none
+&trans  &mt LGUI LC(A)  &mt LALT LC(S)  &mt LSHFT LC(D)  &mt LCTRL LC(F)  &none             &none  &none  &msc SCRL_UP    &kp LEFT      &kp DOWN  &kp RIGHT    &kp PG_DN  &none
+&trans  &kp LC(NUBS)    &kp LC(Z)       &kp LC(X)        &kp LC(C)        &kp LC(LS(NUBS))                &none           &kp LC(HOME)  &none     &kp LC(END)  &none      &none
+                                        &to 0            &trans           &trans                          &trans          &trans        &trans
             >;
         };
 
@@ -362,10 +362,10 @@
             //                    |     |     |     |           |     |      |      |
 
             bindings = <
-&to BASE         &kp PSCRN   &kp F7  &kp F8    &kp F9  &kp F12    &none  &none  &none   &kp RCTRL  &kp RSHFT  &kp RALT  &kp RGUI  &none
-&kp CAPS         &kp SLCK    &kp F4  &kp F5    &kp F6  &kp F11    &none  &none  &none   &kp LCTRL  &kp LSHFT  &kp LALT  &kp LGUI  &none
-&kp PAUSE_BREAK  &kp KP_NUM  &kp F1  &kp F2    &kp F3  &kp F10                  &none   &none      &none      &none     &none     &none
-                                     &to BASE  &trans  &kp PSCRN                &trans  &trans     &trans
+&to 0            &kp PSCRN   &kp F7  &kp F8  &kp F9  &kp F12    &none  &none  &none   &kp RCTRL  &kp RSHFT  &kp RALT  &kp RGUI  &none
+&kp CAPS         &kp SLCK    &kp F4  &kp F5  &kp F6  &kp F11    &none  &none  &none   &kp LCTRL  &kp LSHFT  &kp LALT  &kp LGUI  &none
+&kp PAUSE_BREAK  &kp KP_NUM  &kp F1  &kp F2  &kp F3  &kp F10                  &none   &none      &none      &none     &none     &none
+                                     &to 0   &trans  &kp PSCRN                &trans  &trans     &trans
             >;
         };
 
@@ -390,10 +390,10 @@
             //                    |     |     |     |             |     |      |     |
 
             bindings = <
-&to BASE  &none           &none            &none            &none            &kp K_SLEEP      &none  &none  &sys_reset   &none   &none     &none       &kp C_VOL_UP  &none
-&trans    &none           &sys_reset       &none            &none            &bootloader      &none  &none  &bootloader  &none   &kp K_PP  &none       &kp C_VOL_DN  &none
-&trans    &studio_unlock  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG                &none        &none   &none     &kp K_MUTE  &none         &none
-                                           &to BASE         &trans           &kp K_LOCK                     &kp K_PP     &trans  &trans
+&to 0   &none           &none            &none            &none            &kp K_SLEEP      &none  &none  &sys_reset   &none   &none     &none       &kp C_VOL_UP  &none
+&trans  &none           &sys_reset       &none            &none            &bootloader      &none  &none  &bootloader  &none   &kp K_PP  &none       &kp C_VOL_DN  &none
+&trans  &studio_unlock  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG                &none        &none   &none     &kp K_MUTE  &none         &none
+                                         &to 0            &trans           &kp K_LOCK                     &kp K_PP     &trans  &trans
             >;
         };
 
@@ -418,10 +418,10 @@
             //                      |      |      |     |           |     |      |     |
 
             bindings = <
-&to BASE  &kp RGUI  &kp RALT  &kp RSHFT  &kp RCTRL  &none     &none  &none  &none      &none           &mmv MOVE_UP    &none            &msc SCRL_DOWN  &none
-&trans    &kp LGUI  &kp LALT  &kp LSHFT  &kp LCTRL  &none     &none  &none  &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP    &none
-&trans    &none     &none     &none      &none      &none                   &none      &none           &none           &none            &none           &none
-                              &to BASE   &trans     &mo MWHL                &mkp LCLK  &mkp MCLK       &mkp RCLK
+&to 0   &kp RGUI  &kp RALT  &kp RSHFT  &kp RCTRL  &none   &none  &none  &none      &none           &mmv MOVE_UP    &none            &msc SCRL_DOWN  &none
+&trans  &kp LGUI  &kp LALT  &kp LSHFT  &kp LCTRL  &none   &none  &none  &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP    &none
+&trans  &none     &none     &none      &none      &none                 &none      &none           &none           &none            &none           &none
+                            &to 0      &trans     &mo 11                &mkp LCLK  &mkp MCLK       &mkp RCLK
             >;
         };
 
@@ -446,10 +446,10 @@
             //                    |     |     |     |               |     |      |     |
 
             bindings = <
-&to BASE  &none  &none  &none     &none   &none   &none  &none  &none      &none           &msc SCRL_DOWN  &none            &none  &none
-&trans    &none  &none  &none     &none   &none   &none  &none  &none      &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &none  &none
-&trans    &none  &none  &none     &none   &none                 &none      &none           &none           &none            &none  &none
-                        &to BASE  &trans  &trans                &mkp LCLK  &mkp MCLK       &mkp RCLK
+&to 0   &none  &none  &none  &none   &none   &none  &none  &none      &none           &msc SCRL_DOWN  &none            &none  &none
+&trans  &none  &none  &none  &none   &none   &none  &none  &none      &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &none  &none
+&trans  &none  &none  &none  &none   &none                 &none      &none           &none           &none            &none  &none
+                      &to 0  &trans  &trans                &mkp LCLK  &mkp MCLK       &mkp RCLK
             >;
         };
 
@@ -474,10 +474,10 @@
             //                    |     |     |     |           |     |      |     |
 
             bindings = <
-&to BASE  &none  &none  &none     &none   &none              &none  &none  &kp LC(F12)    &kp LS(LA(F12))  &vsc LC(LS(UP))    &none  &none         &none
-&trans    &none  &none  &vsc R    &none   &kp LC(LS(LA(K)))  &none  &none  &none          &none            &vsc LC(LS(DOWN))  &none  &none         &none
-&trans    &none  &none  &none     &none   &kp LC(GRAVE)                    &kp LC(LS(N))  &none            &none              &none  &kp LC(FSLH)  &none
-                        &to BASE  &trans  &trans                           &mo CSLP       &trans           &trans
+&to 0   &none  &none  &none   &none   &none              &none  &none  &kp LC(F12)    &kp LS(LA(F12))  &vsc LC(LS(UP))    &none  &none         &none
+&trans  &none  &none  &vsc R  &none   &kp LC(LS(LA(K)))  &none  &none  &none          &none            &vsc LC(LS(DOWN))  &none  &none         &none
+&trans  &none  &none  &none   &none   &kp LC(GRAVE)                    &kp LC(LS(N))  &none            &none              &none  &kp LC(FSLH)  &none
+                      &to 0   &trans  &trans                           &mo 13         &trans           &trans
             >;
         };
 
@@ -502,10 +502,10 @@
             //                    |     |     |     |           |     |      |     |
 
             bindings = <
-&to BASE  &none  &none  &none     &none   &none   &none  &none  &none   &none          &vsc LS(UP)    &none           &kp LC(LA(LEFT))   &none
-&trans    &none  &none  &none     &none   &none   &none  &none  &none   &vsc LS(LEFT)  &vsc LS(DOWN)  &vsc LS(RIGHT)  &kp LC(LA(RIGHT))  &none
-&trans    &none  &none  &none     &none   &none                 &none   &none          &none          &none           &none              &none
-                        &to BASE  &trans  &trans                &trans  &trans         &trans
+&to 0   &none  &none  &none  &none   &none   &none  &none  &none   &none          &vsc LS(UP)    &none           &kp LC(LA(LEFT))   &none
+&trans  &none  &none  &none  &none   &none   &none  &none  &none   &vsc LS(LEFT)  &vsc LS(DOWN)  &vsc LS(RIGHT)  &kp LC(LA(RIGHT))  &none
+&trans  &none  &none  &none  &none   &none                 &none   &none          &none          &none           &none              &none
+                      &to 0  &trans  &trans                &trans  &trans         &trans
             >;
         };
 
@@ -530,10 +530,10 @@
             //                    |      |      |     |               |     |      |     |
 
             bindings = <
-&to BASE  &none  &kp LG(W)  &none      &kp LG(GRAVE)  &kp LG(LS(GRAVE))  &none  &none  &none     &kp LG(HOME)  &kp LG(UP)    &kp LG(END)    &kp LG(PG_UP)  &none
-&trans    &none  &kp LALT   &kp LSHFT  &kp LCTRL      &none              &none  &none  &none     &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &kp LG(PG_DN)  &none
-&trans    &none  &none      &none      &none          &none                            &none     &none         &none         &none          &none          &none
-                            &to BASE   &trans         &trans                           &mo TSIZ  &trans        &trans
+&to 0   &none  &kp LG(W)  &kp LS(LC(LEFT_BRACKET))         &kp LG(GRAVE)  &kp LG(LS(GRAVE))  &none  &none  &none   &kp LG(HOME)  &kp LG(UP)    &kp LG(END)    &kp LG(PG_UP)  &none
+&trans  &none  &kp LALT   &mt LSHFT LS(LC(RIGHT_BRACKET))  &kp LCTRL      &none              &none  &none  &none   &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &kp LG(PG_DN)  &none
+&trans  &none  &none      &none                            &none          &none                            &none   &none         &none         &none          &none          &none
+                          &to 0                            &trans         &trans                           &mo 15  &trans        &trans
             >;
         };
 
@@ -558,10 +558,10 @@
             //                    |     |     |     |           |     |      |     |
 
             bindings = <
-&to BASE  &none  &none  &none     &none   &none   &none  &none  &none   &none          &kp LG(LS(EQUAL))  &none          &none  &none
-&trans    &none  &none  &none     &none   &none   &none  &none  &none   &kp LG(MINUS)  &kp LG(LS(MINUS))  &kp LG(EQUAL)  &none  &none
-&trans    &none  &none  &none     &none   &none                 &none   &none          &none              &none          &none  &none
-                        &to BASE  &trans  &trans                &trans  &trans         &trans
+&to 0   &none  &kp LS(LC(F7))  &kp LC(LS(B))  &kp LS(LC(F8))  &none   &none  &none  &none   &none          &kp LG(LS(EQUAL))  &none          &none  &none
+&trans  &none  &kp LS(LC(F4))  &kp LS(LC(F))  &kp LS(LC(F5))  &none   &none  &none  &none   &kp LG(MINUS)  &kp LG(LS(MINUS))  &kp LG(EQUAL)  &none  &none
+&trans  &none  &kp LS(LC(F1))  &none          &kp LC(LS(F2))  &none                 &none   &none          &none              &none          &none  &none
+                               &to 0          &trans          &trans                &trans  &trans         &trans
             >;
         };
 
@@ -581,10 +581,10 @@
             //                   |    |    |     |           |      |     |     |
 
             bindings = <
-&to BASE  &none  &none  &none     &none  &none  &none  &none  &bt BT_CLR  &none         &none         &none         &none         &none
-&none     &none  &none  &none     &none  &none  &none  &none  &none       &none         &none         &none         &none         &none
-&none     &none  &none  &none     &none  &none                &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none
-                        &to BASE  &none  &none                &none       &none         &none
+&to 0  &none  &none  &none  &none  &none  &none  &none  &bt BT_CLR  &none         &none         &none         &none         &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none       &none         &none         &none         &none         &none
+&none  &none  &none  &none  &none  &none                &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none
+                     &to 0  &none  &none                &none       &none         &none
             >;
         };
     };
