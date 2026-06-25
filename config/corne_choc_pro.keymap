@@ -161,8 +161,8 @@
 
             bindings = <
 &to 2   &trans       &trans       &hml RSHFT F  &hml RCTRL P  &kp B   &none  &none  &kp J     &hmr RCTRL L  &hmr RSHFT U  &hmr RALT Y  &hmr RGUI DQT  &none
-&trans  &hml LGUI A  &hml LALT R  &hml LSHFT S  &hml LCTRL T  &trans  &none  &none  &lt 12 M  &hmr LCTRL N  &hmr LSHFT E  &hmr LALT I  &hmr LGUI O    &none
-&trans  &lt 10 Z     &kp X        &lt 10 C      &lt 12 D      &trans                &kp K     &lt 8 H       &trans        &trans       &trans         &none
+&trans  &hml LGUI A  &hml LALT R  &hml LSHFT S  &hml LCTRL T  &trans  &none  &none  &lt 14 M  &hmr LCTRL N  &hmr LSHFT E  &hmr LALT I  &hmr LGUI O    &none
+&trans  &lt 10 Z     &kp X        &lt 10 C      &lt 12 D      &trans                &lt 8 K   &lt 12 H      &trans        &trans       &trans         &none
                                   &trans        &trans        &trans                &trans    &trans        &trans
             >;
 
