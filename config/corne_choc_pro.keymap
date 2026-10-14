@@ -31,6 +31,7 @@
 #define TILE 14
 #define TSIZ 15
 #define BLUE 16
+#define TERM 17
 
 / {
     chosen { zmk,physical-layout = &default_layout; };
@@ -588,7 +589,20 @@
             >;
         };
 
-        TERM {
+        terminal_layer {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            // ┃                                                 ┃
+
+            label = "TERM";
+            display-name = "AI";
+
+            // ┃                                                 ┃
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+            // -----------------------------------------------------------------------------------------
+            // | BASE |    |     |    |    |     |     |     |      |     | T UP |     |     |   |
+            // |      |    |     |    |    |     |     |     |      |     | T DW |     |     |   |
+            // |      |    |     |    |    |     |           |      |     |      |     |     |   |
+            //                   |    |    |     |           |      |     |      |
             bindings = <
 &to 0  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp LS(LC(UP_ARROW))    &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp LS(LC(DOWN_ARROW))  &none  &none  &none
