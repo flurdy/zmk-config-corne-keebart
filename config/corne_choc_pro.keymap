@@ -337,7 +337,7 @@
             bindings = <
 &to 0   &kp RGUI  &kp RALT  &kp RSHIFT  &kp RCTRL  &none   &none  &none  &msc SCRL_DOWN  &kp HOME       &kp UP      &kp END      &kp PG_UP  &none
 &trans  &kp LGUI  &kp LALT  &kp LSHFT   &kp LCTRL  &none   &none  &none  &msc SCRL_UP    &kp LEFT       &kp DOWN    &kp RIGHT    &kp PG_DN  &none
-&trans  &none     &none     &none       &mo 17     &none                 &none           &kp LC(HOME)   &none       &kp LC(END)  &none      &none
+&trans  &none     &none     &none       &mo 0      &none                 &none           &kp LC(HOME)   &none       &kp LC(END)  &none      &none
                             &to 0       &trans     &trans                &kp KP_ENTER    &kp BACKSPACE  &kp DELETE
             >;
         };
@@ -475,10 +475,10 @@
             //                    |     |     |     |           |     |      |     |
 
             bindings = <
-&to 0   &none  &none  &none   &none   &none              &none  &none  &kp LC(F12)    &kp LS(LA(F12))  &vsc LC(LS(UP))    &none  &none         &none
-&trans  &none  &none  &vsc R  &none   &kp LC(LS(LA(K)))  &none  &none  &none          &none            &vsc LC(LS(DOWN))  &none  &none         &none
-&trans  &none  &none  &none   &none   &kp LC(GRAVE)                    &kp LC(LS(N))  &none            &none              &none  &kp LC(FSLH)  &none
-                      &to 0   &trans  &mo 17                           &mo 13         &trans           &trans
+&to 0   &none  &none  &none   &none   &none              &none  &none  &kp LC(F12)    &kp LS(LA(F12))  &vsc LC(LS(UP))    &none  &kp LS(LC(UP))    &none
+&trans  &none  &none  &vsc R  &none   &kp LC(LS(LA(K)))  &none  &none  &none          &none            &vsc LC(LS(DOWN))  &none  &kp LS(LC(DOWN))  &none
+&trans  &none  &none  &none   &none   &kp LC(GRAVE)                    &kp LC(LS(N))  &none            &none              &none  &kp LC(FSLH)      &none
+                      &to 0   &trans  &none                            &mo 13         &trans           &trans
             >;
         };
 
@@ -586,29 +586,6 @@
 &none  &none  &none  &none  &none  &none  &none  &none  &none       &none         &none         &none         &none         &none
 &none  &none  &none  &none  &none  &none                &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none
                      &to 0  &none  &none                &none       &none         &none
-            >;
-        };
-
-        terminal_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-            // ┃                                                 ┃
-
-            label = "TERM";
-            display-name = "AI";
-
-            // ┃                                                 ┃
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            // -----------------------------------------------------------------------------------------
-            // | BASE |    |     |    |    |     |     |     |      |     | T UP |     |     |   |
-            // |      |    |     |    |    |     |     |     |      |     | T DW |     |     |   |
-            // |      |    |     |    |    |     |           |      |     |      |     |     |   |
-            //                   |    |    |     |           |      |     |      |
-
-            bindings = <
-&to 0  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp LS(LC(UP_ARROW))    &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp LS(LC(DOWN_ARROW))  &none  &none  &none
-&none  &none  &none  &none  &none  &none                &none  &none  &none                   &none  &none  &none
-                     &to 0  &none  &none                &none  &none  &none
             >;
         };
     };
