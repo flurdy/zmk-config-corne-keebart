@@ -98,7 +98,7 @@
 
         AE {
             bindings = <&kp RA(R)>;
-            key-positions = <24 25>;
+            key-positions = <11 10>;
         };
 
         OE {
@@ -531,10 +531,10 @@
             //                    |      |      |     |               |     |      |     |
 
             bindings = <
-&to 0   &none  &kp LG(W)  &kp LS(LC(LEFT_BRACKET))         &kp LG(GRAVE)  &kp LG(LS(GRAVE))  &none  &none  &none   &kp LG(HOME)  &kp LG(UP)    &kp LG(END)    &kp LG(PG_UP)  &none
-&trans  &none  &kp LALT   &mt LSHFT LS(LC(RIGHT_BRACKET))  &kp LCTRL      &none              &none  &none  &none   &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &kp LG(PG_DN)  &none
-&trans  &none  &none      &none                            &none          &none                            &none   &none         &none         &none          &none          &none
-                          &to 0                            &trans         &trans                           &mo 15  &trans        &trans
+&to 0   &none  &kp LG(W)  &kp LS(LC(LEFT_BRACKET))           &kp LG(GRAVE)  &kp LG(LS(GRAVE))  &none  &none  &none   &kp LG(HOME)  &kp LG(UP)    &kp LG(END)    &kp LG(PG_UP)  &none
+&trans  &none  &kp LALT   &mt (LSHFT) LS(LC(RIGHT_BRACKET))  &kp LCTRL      &none              &none  &none  &none   &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(RIGHT)  &kp LG(PG_DN)  &none
+&trans  &none  &none      &none                              &none          &none                            &none   &none         &none         &none          &none          &none
+                          &to 0                              &trans         &trans                           &mo 15  &trans        &trans
             >;
         };
 
